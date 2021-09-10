@@ -1,0 +1,93 @@
+﻿<Window x:Class="MuEditor.Forms.FormsAdministrador.Characters"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MuEditor.Forms.FormsAdministrador"
+        mc:Ignorable="d"
+        Title="Characters" Height="520" Width="464" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="15"/>
+            <RowDefinition Height="6*"/>
+            <RowDefinition Height="15"/>
+            <RowDefinition Height="6*"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="15"/>
+            <RowDefinition Height="6*"/>
+            <RowDefinition Height="15"/>
+            <RowDefinition Height="6*"/>
+            <RowDefinition Height="15"/>
+            <RowDefinition Height="6*"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="15"/>
+            <RowDefinition Height="6*"/>
+            <RowDefinition Height="15"/>
+            <RowDefinition Height="6*"/>
+            <RowDefinition Height="15"/>
+            <RowDefinition Height="6*"/>
+            <RowDefinition Height="15"/>
+            <RowDefinition Height="6*"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="6*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="200*"/>
+            <ColumnDefinition Width="200*"/>
+            <ColumnDefinition Width="200*"/>
+            <ColumnDefinition Width="200*"/>
+            <ColumnDefinition Width="0*"/>
+        </Grid.ColumnDefinitions>
+        <TextBlock  Margin="1,1,1,1" TextWrapping="Wrap" Text="Name" Grid.Column="1"/>
+        <DataGrid d:ItemsSource="{d:SampleData ItemCount=5}" Grid.RowSpan="22" Margin="1,1,1,1"/>
+        <TextBlock  Margin="1,1,1,1" TextWrapping="Wrap" Text="Race" Grid.Row="2" Grid.Column="1"/>
+        <ComboBox  Grid.Row="3" Margin="1,1,1,1" Grid.Column="1"/>
+        <TextBlock  Margin="1,1,1,1" TextWrapping="Wrap" Text="Level Total" Grid.Column="2"/>
+        <TextBlock  Margin="1,1,1,1" TextWrapping="Wrap" Text="Date Create" Grid.Column="3"/>
+        <TextBox TextWrapping="Wrap"  Width="auto" Height="auto" Margin="1,1,1,1"  Grid.Row="1" Grid.Column="1"/>
+        <TextBox Grid.Column="2" TextWrapping="Wrap"  Width="auto" Height="auto" Margin="1,1,1,1"  Grid.Row="1"/>
+        <TextBox Grid.Column="3" TextWrapping="Wrap"  Width="auto" Height="auto" Margin="1,1,1,1"  Grid.Row="1"/>
+        <TextBlock  Margin="1,1,1,1" TextWrapping="Wrap" Text="---" Grid.Column="2" Grid.Row="3" Width="auto" Height="auto"/>
+        <TextBlock  Margin="1,1,1,1" TextWrapping="Wrap" Text="Status" Grid.Column="2" Grid.Row="2"/>
+        <TextBlock  Margin="1,1,1,1" TextWrapping="Wrap" Text="Level" Grid.Row="5" Grid.Column="1"/>
+        <TextBox TextWrapping="Wrap"  Width="auto" Height="auto" Margin="1,1,1,1"  Grid.Row="6" Grid.Column="1"/>
+        <TextBlock  Margin="1,1,1,1" TextWrapping="Wrap" Text="Experience" Grid.Column="2" Grid.Row="5"/>
+        <TextBox TextWrapping="Wrap"  Width="auto" Height="auto" Margin="1,1,1,1"  Grid.Row="6" Grid.Column="2"/>
+        <TextBlock  Margin="1,1,1,1" TextWrapping="Wrap" Text="Points" Grid.Column="3" Grid.Row="5"/>
+        <TextBox TextWrapping="Wrap"  Width="auto" Height="auto" Margin="1,1,1,1"  Grid.Row="6" Grid.Column="3"/>
+        <TextBlock  Margin="1,1,1,1" TextWrapping="Wrap" Text="Level Master" Grid.Row="7" Grid.Column="1"/>
+        <TextBox TextWrapping="Wrap"  Width="auto" Height="auto" Margin="1,1,1,1"  Grid.Row="8" Grid.Column="1"/>
+        <TextBlock  Margin="1,1,1,1" TextWrapping="Wrap" Text="Experience Master" Grid.Column="2" Grid.Row="7"/>
+        <TextBox TextWrapping="Wrap"  Width="auto" Height="auto" Margin="1,1,1,1"  Grid.Row="8" Grid.Column="2"/>
+        <TextBlock  Margin="1,1,1,1" TextWrapping="Wrap" Text="Points Master" Grid.Column="3" Grid.Row="7"/>
+        <TextBox TextWrapping="Wrap"  Width="auto" Height="auto" Margin="1,1,1,1"  Grid.Row="8" Grid.Column="3"/>
+        <TextBlock  Margin="1,1,1,1" TextWrapping="Wrap" Text="Level Majestic" Grid.Row="9" Grid.Column="1"/>
+        <TextBox TextWrapping="Wrap"  Width="auto" Height="auto" Margin="1,1,1,1"  Grid.Row="10" Grid.Column="1"/>
+        <TextBlock  Margin="1,1,1,1" TextWrapping="Wrap" Text="Experience Mejestic" Grid.Column="2" Grid.Row="9"/>
+        <TextBox TextWrapping="Wrap"  Width="auto" Height="auto" Margin="1,1,1,1"  Grid.Row="10" Grid.Column="2"/>
+        <TextBlock  Margin="1,1,1,1" TextWrapping="Wrap" Text="Points Mejestics" Grid.Column="3" Grid.Row="9"/>
+        <TextBox TextWrapping="Wrap"  Width="auto" Height="auto" Margin="1,1,1,1"  Grid.Row="10" Grid.Column="3"/>
+        <TextBlock  Margin="1,1,1,1" TextWrapping="Wrap" Text="Level Majestic" Grid.Row="12" Grid.Column="1"/>
+        <TextBox TextWrapping="Wrap"  Width="auto" Height="auto" Margin="1,1,1,1"  Grid.Row="13" Grid.Column="1"/>
+        <TextBlock  Margin="1,1,1,1" TextWrapping="Wrap" Text="Level Majestic" Grid.Column="2" Grid.Row="12"/>
+        <TextBox TextWrapping="Wrap"  Width="auto" Height="auto" Margin="1,1,1,1"  Grid.Row="13" Grid.Column="2"/>
+        <TextBlock  Margin="1,1,1,1" TextWrapping="Wrap" Text="Level Majestic" Grid.Column="3" Grid.Row="12"/>
+        <TextBox TextWrapping="Wrap"  Width="auto" Height="auto" Margin="1,1,1,1"  Grid.Row="13" Grid.Column="3"/>
+        <TextBlock  Margin="1,1,1,1" TextWrapping="Wrap" Text="Level Majestic" Grid.Row="14" Grid.Column="1"/>
+        <TextBox TextWrapping="Wrap"  Width="auto" Height="auto" Margin="1,1,1,1"  Grid.Row="15" Grid.Column="1"/>
+        <TextBlock  Margin="1,1,1,1" TextWrapping="Wrap" Text="Level Majestic" Grid.Column="2" Grid.Row="14"/>
+        <TextBox TextWrapping="Wrap"  Width="auto" Height="auto" Margin="1,1,1,1"  Grid.Row="15" Grid.Column="2"/>
+        <TextBlock  Margin="1,1,1,1" TextWrapping="Wrap" Text="Level Majestic" Grid.Row="16" Grid.Column="1"/>
+        <TextBox TextWrapping="Wrap"  Width="auto" Height="auto" Margin="1,1,1,1"  Grid.Row="17" Grid.Column="1"/>
+        <TextBlock  Margin="1,1,1,1" TextWrapping="Wrap" Text="Level Majestic" Grid.Column="2" Grid.Row="16"/>
+        <TextBox TextWrapping="Wrap"  Width="auto" Height="auto" Margin="1,1,1,1"  Grid.Row="17" Grid.Column="2"/>
+        <TextBlock  Margin="1,1,1,1" TextWrapping="Wrap" Text="Level Majestic" Grid.Column="3" Grid.Row="16"/>
+        <TextBox TextWrapping="Wrap"  Width="auto" Height="auto" Margin="1,1,1,1"  Grid.Row="17" Grid.Column="3"/>
+        <TextBlock  Margin="1,1,1,1" TextWrapping="Wrap" Text="Level Majestic" Grid.Row="18" Grid.Column="1"/>
+        <TextBox TextWrapping="Wrap"  Width="auto" Height="auto" Margin="1,1,1,1"  Grid.Row="19" Grid.Column="1"/>
+        <CheckBox Content="Active GM" Margin="1,1,1,1" Grid.Row="21" Grid.Column="1"/>
+        <CheckBox Content="ALL Permissions" Margin="1,1,1,1" Grid.Row="21" Grid.Column="2"/>
+    </Grid>
+
+
+</Window>
