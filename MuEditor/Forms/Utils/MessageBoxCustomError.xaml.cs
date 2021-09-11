@@ -15,11 +15,11 @@ using System.Windows.Shapes;
 namespace MuEditor.Forms.Utils
 {
     /// <summary>
-    /// Lógica interna para CustomMessageBox.xaml
+    /// Lógica interna para MessageBoxCustomError.xaml
     /// </summary>
-    public partial class CustomMessageBoxError : Window
+    public partial class MessageBoxCustomError : Window
     {
-        public CustomMessageBoxError()
+        public MessageBoxCustomError()
         {
             InitializeComponent();
         }

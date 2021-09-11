@@ -43,52 +43,44 @@
         </Grid.ColumnDefinitions>
         <TextBlock  Margin="1,1,1,1" TextWrapping="Wrap" Text="Name" Grid.Column="1" Foreground="#FFFFFFFF"/>
         <TextBlock  Margin="1,1,1,1" TextWrapping="Wrap" Text="Race" Grid.Row="2" Grid.Column="1" Foreground="#FFFFFFFF"/>
-        <ComboBox  Grid.Row="3" Margin="1,1,1,1" Grid.Column="1"/>
+        <ComboBox Name="Race" Grid.Row="3" Margin="1,0,58,1" Grid.Column="1" DropDownClosed="Race_DropDownClosed" Grid.ColumnSpan="2"/>
         <TextBlock  Margin="1,1,1,1" TextWrapping="Wrap" Text="Level Total" Grid.Column="2" Foreground="#FFFFFFFF"/>
-        <TextBlock  Margin="1,1,1,1" TextWrapping="Wrap" Text="Date Create" Grid.Column="3" Foreground="#FFFFFFFF"/>
-        <TextBox TextWrapping="Wrap"  Width="auto" Height="auto" Margin="1,1,1,1"  Grid.Row="1" Grid.Column="1"/>
-        <TextBox Grid.Column="2" TextWrapping="Wrap"  Width="auto" Height="auto" Margin="1,1,1,1"  Grid.Row="1"/>
-        <TextBox Grid.Column="3" TextWrapping="Wrap"  Width="auto" Height="auto" Margin="1,1,1,1"  Grid.Row="1"/>
-        <TextBlock  Margin="1,1,1,1" TextWrapping="Wrap" Text="---" Grid.Column="2" Grid.Row="3" Width="auto" Height="auto" Foreground="#FFFFFFFF"/>
-        <TextBlock  Margin="1,1,1,1" TextWrapping="Wrap" Text="Status" Grid.Column="2" Grid.Row="2" Foreground="#FFFFFFFF"/>
+        <TextBox x:Name="Name" TextWrapping="Wrap"  Width="auto" Height="auto" Margin="1,1,1,1"  Grid.Row="1" Grid.Column="1" IsReadOnly="True"/>
+        <TextBox x:Name="LevelTotal" Grid.Column="2" TextWrapping="Wrap"  Width="auto" Height="auto" Margin="1,1,1,1"  Grid.Row="1" IsReadOnly="True"/>
+        <TextBlock x:Name="Status"  Margin="1,1,1,1" TextWrapping="Wrap" Text="---" Grid.Column="3" Grid.Row="1" Width="auto" Height="auto" Foreground="#FFFFFFFF"/>
+        <TextBlock  Margin="1,1,1,1" TextWrapping="Wrap" Text="Status" Grid.Column="3" Foreground="#FFFFFFFF"/>
         <TextBlock  Margin="1,1,1,1" TextWrapping="Wrap" Text="Level" Grid.Row="5" Grid.Column="1" Foreground="#FFFFFFFF"/>
-        <TextBox TextWrapping="Wrap"  Width="auto" Height="auto" Margin="1,1,1,1"  Grid.Row="6" Grid.Column="1"/>
-        <TextBlock  Margin="1,1,1,1" TextWrapping="Wrap" Text="Experience" Grid.Column="2" Grid.Row="5" Foreground="#FFFFFFFF"/>
-        <TextBox TextWrapping="Wrap"  Width="auto" Height="auto" Margin="1,1,1,1"  Grid.Row="6" Grid.Column="2"/>
-        <TextBlock  Margin="1,1,1,1" TextWrapping="Wrap" Text="Points" Grid.Column="3" Grid.Row="5" Foreground="#FFFFFFFF"/>
-        <TextBox TextWrapping="Wrap"  Width="auto" Height="auto" Margin="1,1,1,1"  Grid.Row="6" Grid.Column="3"/>
+        <TextBox x:Name="Level" TextWrapping="Wrap"  Width="auto" Height="auto" Margin="1,1,1,1"  Grid.Row="6" Grid.Column="1" Text="0"/>
+        <TextBlock  Margin="1,1,1,1" TextWrapping="Wrap" Text="Points" Grid.Column="2" Grid.Row="5" Foreground="#FFFFFFFF"/>
+        <TextBox x:Name="Points" TextWrapping="Wrap"  Width="auto" Height="auto" Margin="1,1,1,2"  Grid.Row="6" Grid.Column="2" Text="0"/>
         <TextBlock  Margin="1,1,1,1" TextWrapping="Wrap" Text="Level Master" Grid.Row="7" Grid.Column="1" Foreground="#FFFFFFFF"/>
-        <TextBox TextWrapping="Wrap"  Width="auto" Height="auto" Margin="1,1,1,1"  Grid.Row="8" Grid.Column="1"/>
-        <TextBlock  Margin="1,1,1,1" TextWrapping="Wrap" Text="Experience Master" Grid.Column="2" Grid.Row="7" Foreground="#FFFFFFFF"/>
-        <TextBox TextWrapping="Wrap"  Width="auto" Height="auto" Margin="1,1,1,1"  Grid.Row="8" Grid.Column="2"/>
-        <TextBlock  Margin="1,1,1,1" TextWrapping="Wrap" Text="Points Master" Grid.Column="3" Grid.Row="7" Foreground="#FFFFFFFF"/>
-        <TextBox TextWrapping="Wrap"  Width="auto" Height="auto" Margin="1,1,1,1"  Grid.Row="8" Grid.Column="3"/>
+        <TextBox x:Name="LevelMaster" TextWrapping="Wrap"  Width="auto" Height="auto" Margin="1,1,1,1"  Grid.Row="8" Grid.Column="1" Cursor="" Text="0"/>
+        <TextBlock  Margin="1,0,1,1" TextWrapping="Wrap" Text="Points Master" Grid.Column="2" Grid.Row="7" Foreground="#FFFFFFFF"/>
+        <TextBox x:Name="PointsMaster" TextWrapping="Wrap"  Width="auto" Height="auto" Margin="1,1,1,1"  Grid.Row="8" Grid.Column="2" Text="0"/>
         <TextBlock  Margin="1,1,1,1" TextWrapping="Wrap" Text="Level Majestic" Grid.Row="9" Grid.Column="1" Foreground="#FFFFFFFF"/>
-        <TextBox TextWrapping="Wrap"  Width="auto" Height="auto" Margin="1,1,1,1"  Grid.Row="10" Grid.Column="1"/>
-        <TextBlock  Margin="1,1,1,1" TextWrapping="Wrap" Text="Experience Mejestic" Grid.Column="2" Grid.Row="9" Foreground="#FFFFFFFF"/>
-        <TextBox TextWrapping="Wrap"  Width="auto" Height="auto" Margin="1,1,1,1"  Grid.Row="10" Grid.Column="2"/>
-        <TextBlock  Margin="1,1,1,1" TextWrapping="Wrap" Text="Points Mejestics" Grid.Column="3" Grid.Row="9" Foreground="#FFFFFFFF"/>
-        <TextBox TextWrapping="Wrap"  Width="auto" Height="auto" Margin="1,1,1,1"  Grid.Row="10" Grid.Column="3"/>
+        <TextBox x:Name="LevelMajestic" TextWrapping="Wrap"  Width="auto" Height="auto" Margin="1,1,1,1"  Grid.Row="10" Grid.Column="1" Text="0"/>
+        <TextBlock  Margin="1,1,1,1" TextWrapping="Wrap" Text="Points Majestics" Grid.Column="2" Grid.Row="9" Foreground="#FFFFFFFF"/>
+        <TextBox x:Name="PointsMajestic" TextWrapping="Wrap"  Width="auto" Height="auto" Margin="1,1,1,1"  Grid.Row="10" Grid.Column="2" Text="0"/>
         <TextBlock  Margin="1,1,1,1" TextWrapping="Wrap" Text="Strength" Grid.Row="12" Grid.Column="1" Foreground="#FFFFFFFF"/>
-        <TextBox TextWrapping="Wrap"  Width="auto" Height="auto" Margin="1,1,1,1"  Grid.Row="13" Grid.Column="1"/>
+        <TextBox x:Name="Strength" TextWrapping="Wrap"  Width="auto" Height="auto" Margin="1,1,1,1"  Grid.Row="13" Grid.Column="1" Text="0"/>
         <TextBlock  Margin="1,1,1,1" TextWrapping="Wrap" Text="Agility" Grid.Column="2" Grid.Row="12" Foreground="#FFFFFFFF"/>
-        <TextBox TextWrapping="Wrap"  Width="auto" Height="auto" Margin="1,1,1,1"  Grid.Row="13" Grid.Column="2"/>
+        <TextBox x:Name="Agility" TextWrapping="Wrap"  Width="auto" Height="auto" Margin="1,1,1,1"  Grid.Row="13" Grid.Column="2" Text="0"/>
         <TextBlock  Margin="1,1,1,1" TextWrapping="Wrap" Text="Vitality" Grid.Column="3" Grid.Row="12" Foreground="#FFFFFFFF"/>
-        <TextBox TextWrapping="Wrap"  Width="auto" Height="auto" Margin="1,1,1,1"  Grid.Row="13" Grid.Column="3"/>
+        <TextBox x:Name="Vitality" TextWrapping="Wrap"  Width="auto" Height="auto" Margin="1,1,1,1"  Grid.Row="13" Grid.Column="3" Text="0"/>
         <TextBlock  Margin="1,1,1,1" TextWrapping="Wrap" Text="Energy" Grid.Row="14" Grid.Column="1" Foreground="#FFFFFFFF"/>
-        <TextBox TextWrapping="Wrap"  Width="auto" Height="auto" Margin="1,1,1,1"  Grid.Row="15" Grid.Column="1"/>
+        <TextBox x:Name="Energy" TextWrapping="Wrap"  Width="auto" Height="auto" Margin="1,1,1,1"  Grid.Row="15" Grid.Column="1" Text="0"/>
         <TextBlock  Margin="1,1,1,1" TextWrapping="Wrap" Text="Leadership" Grid.Column="2" Grid.Row="14" Foreground="#FFFFFFFF"/>
-        <TextBox TextWrapping="Wrap"  Width="auto" Height="auto" Margin="1,1,1,1"  Grid.Row="15" Grid.Column="2"/>
+        <TextBox x:Name="Leadership" TextWrapping="Wrap"  Width="auto" Height="auto" Margin="1,1,1,1"  Grid.Row="15" Grid.Column="2" Text="0"/>
         <TextBlock  Margin="1,1,1,1" TextWrapping="Wrap" Text="Zen" Grid.Row="16" Grid.Column="1" Foreground="#FFFFFFFF"/>
-        <TextBox TextWrapping="Wrap"  Width="auto" Height="auto" Margin="1,1,1,1"  Grid.Row="17" Grid.Column="1"/>
+        <TextBox x:Name="Zen" TextWrapping="Wrap"  Width="auto" Height="auto" Margin="1,1,1,1"  Grid.Row="17" Grid.Column="1" Text="0"/>
         <TextBlock  Margin="1,1,1,1" TextWrapping="Wrap" Text="Goblin Points" Grid.Column="2" Grid.Row="16" Foreground="#FFFFFFFF"/>
-        <TextBox TextWrapping="Wrap"  Width="auto" Height="auto" Margin="1,1,1,1"  Grid.Row="17" Grid.Column="2"/>
+        <TextBox x:Name="GoblinPoints" TextWrapping="Wrap"  Width="auto" Height="auto" Margin="1,1,1,1"  Grid.Row="17" Grid.Column="2" Text="0"/>
         <TextBlock  Margin="1,1,1,1" TextWrapping="Wrap" Text="Add Fruit Points" Grid.Column="3" Grid.Row="16" Foreground="#FFFFFFFF"/>
-        <TextBox TextWrapping="Wrap"  Width="auto" Height="auto" Margin="1,1,1,1"  Grid.Row="17" Grid.Column="3"/>
+        <TextBox x:Name="AddFruit" TextWrapping="Wrap"  Width="auto" Height="auto" Margin="1,1,1,1"  Grid.Row="17" Grid.Column="3" Text="0"/>
         <TextBlock  Margin="1,1,1,1" TextWrapping="Wrap" Text="Dec Fruit Points" Grid.Row="18" Grid.Column="1" Foreground="#FFFFFFFF"/>
-        <TextBox TextWrapping="Wrap"  Width="auto" Height="auto" Margin="1,1,1,1"  Grid.Row="19" Grid.Column="1"/>
-        <CheckBox Content="Active GM" Margin="1,1,1,1" Grid.Row="19" Grid.Column="2" Foreground="#FFFFFFFF"/>
-        <CheckBox Content="ALL Permissions" Margin="1,1,1,1" Grid.Row="19" Grid.Column="3" Foreground="#FFFFFFFF"/>
+        <TextBox x:Name="DecFruit" TextWrapping="Wrap"  Width="auto" Height="auto" Margin="1,1,1,1"  Grid.Row="19" Grid.Column="1" Text="0"/>
+        <CheckBox x:Name="ActiveGM" Content="Active GM" Margin="1,1,1,1" Grid.Row="19" Grid.Column="2" Foreground="#FFFFFFFF"/>
+        <CheckBox x:Name="AllPermissions" Content="ALL Permissions" Margin="1,1,1,1" Grid.Row="19" Grid.Column="3" Foreground="#FFFFFFFF"/>
         <Button Grid.Column="3" Content="Close"  Margin="1,1,1,1" Grid.Row="21" BorderThickness="0,0,0,0" Background="#B2FF0000" Foreground="#FFFDFDFD" Click="Button_Click">
             <Button.Resources>
                 <Style TargetType="{x:Type Border}">
@@ -96,7 +88,7 @@
                 </Style>
             </Button.Resources>
         </Button>
-        <Button Grid.Column="1" Content="Save"  Margin="1,1,1,1" Grid.Row="21" BorderThickness="0,0,0,0" Background="#B2FF0000" Foreground="#FFFDFDFD" Click="Button_Click">
+        <Button Content="Save"  Margin="1,1,1,1" Grid.Row="21" BorderThickness="0,0,0,0" Background="#B2FF0000" Foreground="#FFFDFDFD" Click="Button_Click_Save">
             <Button.Resources>
                 <Style TargetType="{x:Type Border}">
                     <Setter Property="CornerRadius" Value="5"/>

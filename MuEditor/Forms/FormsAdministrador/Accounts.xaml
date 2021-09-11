@@ -38,7 +38,7 @@
         <TextBlock Grid.Column="2" Margin="1,1,1,1" Grid.Row="1" TextWrapping="Wrap" Text="Email" FontFamily="Yu Gothic UI" FontSize="13" Foreground="White"/>
         <TextBox x:Name="Register"  Grid.Row="2" TextWrapping="Wrap" Margin="1,1,1,1" Grid.Column="3" IsReadOnly="True"  Background="#FFBDBDBD"/>
         <TextBlock Grid.Column="3" Margin="1,1,1,1" Grid.Row="1" TextWrapping="Wrap" Text="Register" FontFamily="Yu Gothic UI" FontSize="13" Foreground="White"/>
-        <TextBox x:Name="Credits"  Grid.Row="4" TextWrapping="Wrap" Margin="1,1,1,1" Grid.Column="1"/>
+        <TextBox x:Name="Credits"  Grid.Row="4" TextWrapping="Wrap" Margin="1,1,1,1" Grid.Column="1" Text="0"/>
         <TextBlock Grid.Column="1" Margin="1,1,1,1" Grid.Row="3" TextWrapping="Wrap" Text="Credits" FontFamily="Yu Gothic UI" FontSize="13" Foreground="White"/>
         <TextBox x:Name="CurrentIP"  Grid.Row="4" TextWrapping="Wrap" Margin="1,1,1,1" Grid.Column="2" IsReadOnly="True" Background="#FFBDBDBD"/>
         <TextBlock Grid.Column="2" Margin="1,1,1,1" Grid.Row="3" TextWrapping="Wrap" Text="Current IP" FontFamily="Yu Gothic UI" FontSize="13" Foreground="White"/>
@@ -50,7 +50,7 @@
         <TextBlock Grid.Column="3" Margin="1,1,1,1" Grid.Row="3" TextWrapping="Wrap" Text="Type Account" FontFamily="Yu Gothic UI" FontSize="13" Foreground="White"/>
         <CheckBox x:Name="VipStatus" Grid.Column="1" Content="VIP Status"  Margin="1,1,1,1" Grid.Row="5" Height="auto" TextBlock.FontFamily="Yu Gothic UI" TextBlock.FontSize="13" TextBlock.Foreground="White" />
         <TextBlock Grid.Column="1" Margin="1,1,1,1" Grid.Row="6" TextWrapping="Wrap" Text="Time Left VIP" FontFamily="Yu Gothic UI" FontSize="13" Foreground="White"/>
-        <TextBox x:Name="FindAccount"  Grid.Row="10" TextWrapping="Wrap" Margin="2,2,2,2" TextChanged="FindAccount_TextChanged"/>
+        <TextBox x:Name="FindAccount"  Grid.Row="10" TextWrapping="Wrap" Margin="2,2,2,2" TextChanged="FindAccount_TextChanged" Text=""/>
         <Button Content="Save"  Margin="1,1,1,1" Grid.Row="12" BorderThickness="0,0,0,0" Background="#B2FF0000" Foreground="#FFFDFDFD" Click="Button_Click_1">
             <Button.Resources>
                 <Style TargetType="Border">
@@ -66,6 +66,6 @@
             </Button.Resources>
         </Button>
         <TextBlock Margin="1,1,1,1" Grid.Row="9" TextWrapping="Wrap" Text="Find Account" FontFamily="Yu Gothic UI" FontSize="13" Foreground="White"/>
-        <TextBox x:Name="TimeVip"   Grid.Row="7" TextWrapping="Wrap" Margin="1,1,1,1" Grid.Column="1"/>
+        <TextBox x:Name="TimeVip"   Grid.Row="7" TextWrapping="Wrap" Margin="1,1,1,1" Grid.Column="1" Text="0"/>
     </Grid>
 </Window>

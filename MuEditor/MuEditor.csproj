@@ -276,11 +276,11 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Forms\Utils\CustomMessageBoxCheck.xaml">
+    <Page Include="Forms\Utils\MessageBoxCustomCheck.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Forms\Utils\CustomMessageBoxError.xaml">
+    <Page Include="Forms\Utils\MessageBoxCustomError.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -289,12 +289,13 @@
     <Compile Include="Forms\FormsUsers\Main.xaml.cs">
       <DependentUpon>Main.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Utils\CustomMessageBoxCheck.xaml.cs">
-      <DependentUpon>CustomMessageBoxCheck.xaml</DependentUpon>
+    <Compile Include="Forms\Utils\MessageBoxCustomCheck.xaml.cs">
+      <DependentUpon>MessageBoxCustomCheck.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Utils\CustomMessageBoxError.xaml.cs">
-      <DependentUpon>CustomMessageBoxError.xaml</DependentUpon>
+    <Compile Include="Forms\Utils\MessageBoxCustomError.xaml.cs">
+      <DependentUpon>MessageBoxCustomError.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Models\Character.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>

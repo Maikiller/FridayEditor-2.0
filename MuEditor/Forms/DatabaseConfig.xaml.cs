@@ -38,7 +38,7 @@ namespace MuEditor.Forms
         {
             LoginDatabase();
             Connect.DetectedApplicationError();
-            CustomMessageBoxCheck box = new();
+            MessageBoxCustomCheck box = new();
             if (Config.applicationError == 0)
             {
                 box.CustomMessage.Text = "Database Connected";

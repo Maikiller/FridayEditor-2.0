@@ -17,9 +17,9 @@ namespace MuEditor.Forms.Utils
     /// <summary>
     /// Lógica interna para CustomMessageBoxCheck.xaml
     /// </summary>
-    public partial class CustomMessageBoxCheck : Window
+    public partial class MessageBoxCustomCheck : Window
     {
-        public CustomMessageBoxCheck()
+        public MessageBoxCustomCheck()
         {
             InitializeComponent();
         }

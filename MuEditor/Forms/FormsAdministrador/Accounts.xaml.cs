@@ -30,6 +30,13 @@ namespace MuEditor.Forms.FormsAdministrador
 
         private void UpdateAccount()
         {
+            MessageBoxCustomError box = new();
+            if (Account.Text == "")
+            {
+                box.CustomMessage.Text = "Select Account";
+                box.ShowDialog();
+                return;
+            }
             User.account = Account.Text;
             User.email = Email.Text;
             User.credits = int.Parse(Credits.Text);
@@ -57,15 +64,11 @@ namespace MuEditor.Forms.FormsAdministrador
                     break;
             }
 
-            /*Query query1 = new();
-            if (Connect.LoadData(query1.DuplicateAccount).Rows[0].ItemArray[0].ToString() == Account.Text)
-                return;*/
-
             Query query = new();
             Connect.Update(query.updateAccount);
             DatagridAccounts.ItemsSource = Connect.LoadData(query.loadAccounts).DefaultView;
 
-            CustomMessageBoxCheck boxCheck = new();
+            MessageBoxCustomCheck boxCheck = new();
             boxCheck.CustomMessage.Text = "Account: " + User.account + " Update Successful";
             boxCheck.ShowDialog();
 

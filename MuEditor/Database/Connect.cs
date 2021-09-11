@@ -27,7 +27,7 @@ namespace MuEditor.Database
 
         public static void DetectedApplicationError()
         {
-            CustomMessageBoxError boxError = new();
+            MessageBoxCustomError boxError = new();
             try
             {
                 Connection().Open();
@@ -56,7 +56,7 @@ namespace MuEditor.Database
             }
             catch (MySqlException ex)
             {
-                CustomMessageBoxError box = new();
+                MessageBoxCustomError box = new();
                 box.CustomMessage.Text = ex.Message;
                 box.ShowDialog();
             }
@@ -74,7 +74,7 @@ namespace MuEditor.Database
             }
             catch (MySqlException ex)
             {
-                CustomMessageBoxError box = new();
+                MessageBoxCustomError box = new();
                 box.CustomMessage.Text = ex.Message;
                 box.ShowDialog();
             }

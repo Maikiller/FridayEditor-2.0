@@ -8,6 +8,5 @@
         public static string user;
         public static string password;
         public static int applicationError; // 0 = Not Detected , 1 = Detected
-        public static string applicationMsg;
     }
 }

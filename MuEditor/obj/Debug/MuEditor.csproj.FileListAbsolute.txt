@@ -80,7 +80,7 @@ C:\Users\maiki\source\repos\MuEditor\MuEditor\bin\Debug\MaterialDesignThemes.Wpf
 C:\Users\maiki\source\repos\MuEditor\MuEditor\bin\Debug\MaterialDesignColors.pdb
 C:\Users\maiki\source\repos\MuEditor\MuEditor\bin\Debug\MaterialDesignThemes.Wpf.pdb
 C:\Users\maiki\source\repos\MuEditor\MuEditor\bin\Debug\MaterialDesignThemes.Wpf.xml
-C:\Users\maiki\source\repos\MuEditor\MuEditor\obj\Debug\Forms\Utils\CustomMessageBoxError.g.cs
-C:\Users\maiki\source\repos\MuEditor\MuEditor\obj\Debug\Forms\Utils\CustomMessageBoxError.baml
-C:\Users\maiki\source\repos\MuEditor\MuEditor\obj\Debug\Forms\Utils\CustomMessageBoxCheck.g.cs
-C:\Users\maiki\source\repos\MuEditor\MuEditor\obj\Debug\Forms\Utils\CustomMessageBoxCheck.baml
+C:\Users\maiki\source\repos\MuEditor\MuEditor\obj\Debug\Forms\Utils\MessageBoxCustomCheck.g.cs
+C:\Users\maiki\source\repos\MuEditor\MuEditor\obj\Debug\Forms\Utils\MessageBoxCustomError.g.cs
+C:\Users\maiki\source\repos\MuEditor\MuEditor\obj\Debug\Forms\Utils\MessageBoxCustomCheck.baml
+C:\Users\maiki\source\repos\MuEditor\MuEditor\obj\Debug\Forms\Utils\MessageBoxCustomError.baml
