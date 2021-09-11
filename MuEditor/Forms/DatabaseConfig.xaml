@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MuEditor.Forms"
         mc:Ignorable="d"
-        Title="DatabaseConfig" Height="340.667" Width="268.852" WindowStartupLocation="CenterScreen" Topmost="True">
+        Title="DatabaseConfig" Height="340.667" Width="268.852" WindowStartupLocation="CenterScreen">
     <Grid>
         <TextBox x:Name="User" Height="23" Margin="10,116,10,0" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="Yu Gothic UI" FontSize="14" Text="root" />
         <TextBox Name="Password" Height="23" Margin="10,168,10,0" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="Yu Gothic UI" FontSize="14" Text="root" />

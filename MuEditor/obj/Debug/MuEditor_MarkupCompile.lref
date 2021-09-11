@@ -1,13 +1,11 @@
 ﻿
 
 FC:\Users\maiki\source\repos\MuEditor\MuEditor\Forms\DatabaseConfig.xaml;;
-FC:\Users\maiki\source\repos\MuEditor\MuEditor\Forms\FormsAdministrador\Main.xaml;;
-FC:\Users\maiki\source\repos\MuEditor\MuEditor\Forms\Login.xaml;;
-FC:\Users\maiki\source\repos\MuEditor\MuEditor\Forms\FormsUsers\Main.xaml;;
 FC:\Users\maiki\source\repos\MuEditor\MuEditor\Forms\FormsAdministrador\Accounts.xaml;;
 FC:\Users\maiki\source\repos\MuEditor\MuEditor\Forms\FormsAdministrador\Characters.xaml;;
 FC:\Users\maiki\source\repos\MuEditor\MuEditor\Forms\FormsAdministrador\Events.xaml;;
 FC:\Users\maiki\source\repos\MuEditor\MuEditor\Forms\FormsAdministrador\Guild.xaml;;
+FC:\Users\maiki\source\repos\MuEditor\MuEditor\Forms\FormsAdministrador\Main.xaml;;
 FC:\Users\maiki\source\repos\MuEditor\MuEditor\Forms\FormsAdministrador\MiniMapEditor.xaml;;
 FC:\Users\maiki\source\repos\MuEditor\MuEditor\Forms\FormsAdministrador\ServerSettings.xaml;;
 FC:\Users\maiki\source\repos\MuEditor\MuEditor\Forms\FormsAdministrador\ShopCreate.xaml;;
@@ -21,4 +19,8 @@ FC:\Users\maiki\source\repos\MuEditor\MuEditor\Forms\FormsUsers\Commands.xaml;;
 FC:\Users\maiki\source\repos\MuEditor\MuEditor\Forms\FormsUsers\Events.xaml;;
 FC:\Users\maiki\source\repos\MuEditor\MuEditor\Forms\FormsUsers\Guild.xaml;;
 FC:\Users\maiki\source\repos\MuEditor\MuEditor\Forms\FormsUsers\Tickets.xaml;;
+FC:\Users\maiki\source\repos\MuEditor\MuEditor\Forms\Login.xaml;;
+FC:\Users\maiki\source\repos\MuEditor\MuEditor\Forms\FormsUsers\Main.xaml;;
+FC:\Users\maiki\source\repos\MuEditor\MuEditor\Forms\Utils\CustomMessageBoxError.xaml;;
+FC:\Users\maiki\source\repos\MuEditor\MuEditor\Forms\Utils\CustomMessageBoxCheck.xaml;;
 

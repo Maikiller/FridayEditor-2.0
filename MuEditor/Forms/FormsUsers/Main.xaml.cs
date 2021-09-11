@@ -1,5 +1,9 @@
-﻿using System.Windows;
+﻿using System;
+using System.Data;
+using System.Windows;
+using MuEditor.Database;
 using MuEditor.Forms.FormsAdministrador;
+using MuEditor.Forms.Utils;
 
 namespace MuEditor.Forms.FormsUsers
 {
@@ -52,8 +56,8 @@ namespace MuEditor.Forms.FormsUsers
 
         private void Button_Click_5(object sender, RoutedEventArgs e)
         {
-            Tickets tickets = new();
-            tickets.Show();
+            Connect.DetectedApplicationError();
+
         }
 
         private void Button_Click_6(object sender, RoutedEventArgs e)
@@ -61,5 +65,7 @@ namespace MuEditor.Forms.FormsUsers
             Events events = new();
             events.Show();
         }
+
+
     }
 }

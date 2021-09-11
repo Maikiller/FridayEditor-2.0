@@ -1,4 +1,5 @@
-﻿using MuEditor.Forms.FormsUsers;
+﻿using MuEditor.Database;
+using MuEditor.Forms.FormsUsers;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -24,6 +25,8 @@ namespace MuEditor.Forms.FormsAdministrador
         {
             InitializeComponent();
         }
+
+        
 
         private void Window_Closed(object sender, EventArgs e)
         {
@@ -81,7 +84,7 @@ namespace MuEditor.Forms.FormsAdministrador
 
         private void Button_Click_8(object sender, RoutedEventArgs e)
         {
-            MiniMapEditor miniMapEditor = new MiniMapEditor();
+            MiniMapEditor miniMapEditor = new();
             miniMapEditor.Show();
         }
 
@@ -105,6 +108,17 @@ namespace MuEditor.Forms.FormsAdministrador
         private void Button_Click_12(object sender, RoutedEventArgs e)
         {
             MessageBox.Show("Working");
+        }
+
+        private void Window_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            if (e.LeftButton == MouseButtonState.Pressed)
+                DragMove();
+        }
+
+        private void Button_Click_13(object sender, RoutedEventArgs e)
+        {
+            Close();
         }
     }
 }

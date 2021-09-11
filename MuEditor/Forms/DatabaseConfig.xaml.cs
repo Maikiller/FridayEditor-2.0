@@ -1,4 +1,5 @@
 ﻿using MuEditor.Database;
+using MuEditor.Forms.Utils;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -31,13 +32,20 @@ namespace MuEditor.Forms
             Config.user = User.Text;
             Config.password = Password.Text;
             Config.port = Port.Text;
-            Connect.Connection();
-            Close();
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             LoginDatabase();
+            Connect.DetectedApplicationError();
+            CustomMessageBoxCheck box = new();
+            if (Config.applicationError == 0)
+            {
+                box.CustomMessage.Text = "Database Connected";
+                box.ShowDialog();
+                Close();
+            }
+            
         }
     }
 }

@@ -22,14 +22,15 @@ namespace MuEditor
             User.account = Account.Text;
             User.password = Password.Text;
             Main main = new();
-            if (Account.Text == "admin")
+            /*if (Account.Text == "admin")
             {
                 main.Show();
                 Visibility = Visibility.Hidden;
                 return;
-            }
-
+            }*/
+            
             Query query = new();
+            if(Connect.LoadData(query.authUser).Rows.Count > 0)
             if (int.Parse(Connect.LoadData(query.authUser).Rows[0].ItemArray[0].ToString()) == 1)
             {
                 Visibility = Visibility.Hidden;

@@ -5,7 +5,10 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MuEditor.Forms.FormsAdministrador"
         mc:Ignorable="d"
-        Title="SubServerCreate" Height="450" Width="800" WindowStartupLocation="CenterScreen">
+        Title="SubServerCreate" Height="450" Width="800" WindowStartupLocation="CenterScreen" AllowsTransparency="True" WindowStyle="None" MouseDown="Window_MouseDown" Foreground="#FFFFFFFF">
+    <Window.Background>
+        <SolidColorBrush  Opacity=".3" Color="Black"></SolidColorBrush>
+    </Window.Background>
     <Grid>
         
     </Grid>

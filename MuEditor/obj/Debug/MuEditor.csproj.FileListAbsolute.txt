@@ -75,4 +75,12 @@ C:\Users\maiki\source\repos\MuEditor\MuEditor\obj\Debug\Forms\FormsUsers\Command
 C:\Users\maiki\source\repos\MuEditor\MuEditor\obj\Debug\Forms\FormsUsers\Events.baml
 C:\Users\maiki\source\repos\MuEditor\MuEditor\obj\Debug\Forms\FormsUsers\Guild.baml
 C:\Users\maiki\source\repos\MuEditor\MuEditor\obj\Debug\Forms\FormsUsers\Tickets.baml
-C:\Users\maiki\source\repos\MuEditor\MuEditor\obj\Debug\MuEditor.csproj.CopyComplete
+C:\Users\maiki\source\repos\MuEditor\MuEditor\bin\Debug\MaterialDesignColors.dll
+C:\Users\maiki\source\repos\MuEditor\MuEditor\bin\Debug\MaterialDesignThemes.Wpf.dll
+C:\Users\maiki\source\repos\MuEditor\MuEditor\bin\Debug\MaterialDesignColors.pdb
+C:\Users\maiki\source\repos\MuEditor\MuEditor\bin\Debug\MaterialDesignThemes.Wpf.pdb
+C:\Users\maiki\source\repos\MuEditor\MuEditor\bin\Debug\MaterialDesignThemes.Wpf.xml
+C:\Users\maiki\source\repos\MuEditor\MuEditor\obj\Debug\Forms\Utils\CustomMessageBoxError.g.cs
+C:\Users\maiki\source\repos\MuEditor\MuEditor\obj\Debug\Forms\Utils\CustomMessageBoxError.baml
+C:\Users\maiki\source\repos\MuEditor\MuEditor\obj\Debug\Forms\Utils\CustomMessageBoxCheck.g.cs
+C:\Users\maiki\source\repos\MuEditor\MuEditor\obj\Debug\Forms\Utils\CustomMessageBoxCheck.baml

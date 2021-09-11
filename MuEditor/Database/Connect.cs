@@ -1,4 +1,6 @@
-﻿using MySql.Data.MySqlClient;
+﻿using MuEditor.Forms.Utils;
+using MySql.Data.MySqlClient;
+using System;
 using System.Data;
 using System.Windows;
 
@@ -10,35 +12,37 @@ namespace MuEditor.Database
 
         public static MySqlConnection Connection()
         {
+
             con = new(
-            "" +
-            "Server=" + Config.server + ";" +
-            "Port=" + Config.port + ";" +
-            "Database=" + Config.database + ";" +
-            "Uid=" + Config.user + ";" +
-            "Pwd=" + Config.password + ";" +
-            "Connection Timeout=5;"
-            );
+                       "" +
+                       "Server=" + Config.server + ";" +
+                       "Port=" + Config.port + ";" +
+                       "Database=" + Config.database + ";" +
+                       "Uid=" + Config.user + ";" +
+                       "Pwd=" + Config.password + ";" +
+                       "Connection Timeout=5;"
+                       );
             return con;
         }
 
-        public static void Update(string sql)
+        public static void DetectedApplicationError()
         {
-            var cmd = Connection().CreateCommand();
-            cmd.CommandText = sql;
-            con.Open();
+            CustomMessageBoxError boxError = new();
             try
             {
-                cmd.ExecuteReader();
+                Connection().Open();
+                Config.applicationError = 0;
             }
-            catch (MySqlException ex)
+            catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                Config.applicationError = 1;
+
+                boxError.CustomMessage.Text = ex.Message;
+                boxError.ShowDialog();
             }
-
-            con.Close();
+            Connection().ClearAllPoolsAsync();
+            return;
         }
-
         public static DataTable LoadData(string sql)
         {
             DataTable data = new();
@@ -52,9 +56,29 @@ namespace MuEditor.Database
             }
             catch (MySqlException ex)
             {
-                MessageBox.Show(ex.Message);
+                CustomMessageBoxError box = new();
+                box.CustomMessage.Text = ex.Message;
+                box.ShowDialog();
             }
             return data;
+        }
+
+        public static void Update(string sql)
+        {
+            var cmd = Connection().CreateCommand();
+            cmd.CommandText = sql;
+            con.Open();
+            try
+            {
+                cmd.ExecuteReader();
+            }
+            catch (MySqlException ex)
+            {
+                CustomMessageBoxError box = new();
+                box.CustomMessage.Text = ex.Message;
+                box.ShowDialog();
+            }
+            con.Close();
         }
     }
 }
