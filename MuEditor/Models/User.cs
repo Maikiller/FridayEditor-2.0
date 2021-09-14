@@ -9,6 +9,7 @@ namespace MuEditor.Models
     internal class User
     {
         public static int guid;
+        public static string accountAuth;
         public static string account;
         public static string password;
         public static string email;

@@ -276,6 +276,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Forms\Utils\MessageBoxCustomAlert.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Forms\Utils\MessageBoxCustomCheck.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -289,6 +293,9 @@
     <Compile Include="Forms\FormsUsers\Main.xaml.cs">
       <DependentUpon>Main.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Utils\MessageBoxCustomAlert.xaml.cs">
+      <DependentUpon>MessageBoxCustomAlert.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Utils\MessageBoxCustomCheck.xaml.cs">
       <DependentUpon>MessageBoxCustomCheck.xaml</DependentUpon>
     </Compile>
@@ -296,6 +303,8 @@
       <DependentUpon>MessageBoxCustomError.xaml</DependentUpon>
     </Compile>
     <Compile Include="Models\Character.cs" />
+    <Compile Include="Models\Favorite.cs" />
+    <Compile Include="Models\Shop.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>

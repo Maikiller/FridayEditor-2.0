@@ -31,7 +31,7 @@
             <ColumnDefinition Width="117*"/>
             <ColumnDefinition Width="117*"/>
         </Grid.ColumnDefinitions>
-        <DataGrid Name="DatagridAccounts"  Margin="1,1,1,5" Grid.RowSpan="8" Grid.Row="1" BorderThickness="0,0,0,0" Background="#B2FF0000" ColumnWidth="*" CanUserAddRows="False" CanUserResizeRows="False" CanUserDeleteRows="False" IsReadOnly="True" SelectionMode="Single" SelectionChanged="DatagridAccounts_SelectionChanged" />
+        <DataGrid Name="DatagridAccounts"  Margin="1,1,1,1" Grid.RowSpan="8" Grid.Row="1" BorderThickness="0,0,0,0" Background="#B2FF0000" ColumnWidth="*" CanUserAddRows="False" CanUserResizeRows="False" CanUserDeleteRows="False" IsReadOnly="True" SelectionMode="Single" SelectionChanged="DatagridAccounts_SelectionChanged" />
         <TextBox x:Name="Account"  Grid.Row="2" TextWrapping="Wrap" Margin="1,1,1,1" Grid.Column="1"/>
         <TextBlock Grid.Column="1" Margin="1,1,1,1" Grid.Row="1" TextWrapping="Wrap" Text="Account" FontFamily="Yu Gothic UI" FontSize="13" Foreground="White"/>
         <TextBox x:Name="Email"  Grid.Row="2" TextWrapping="Wrap" Margin="1,1,1,1" Grid.Column="2"/>
@@ -50,7 +50,7 @@
         <TextBlock Grid.Column="3" Margin="1,1,1,1" Grid.Row="3" TextWrapping="Wrap" Text="Type Account" FontFamily="Yu Gothic UI" FontSize="13" Foreground="White"/>
         <CheckBox x:Name="VipStatus" Grid.Column="1" Content="VIP Status"  Margin="1,1,1,1" Grid.Row="5" Height="auto" TextBlock.FontFamily="Yu Gothic UI" TextBlock.FontSize="13" TextBlock.Foreground="White" />
         <TextBlock Grid.Column="1" Margin="1,1,1,1" Grid.Row="6" TextWrapping="Wrap" Text="Time Left VIP" FontFamily="Yu Gothic UI" FontSize="13" Foreground="White"/>
-        <TextBox x:Name="FindAccount"  Grid.Row="10" TextWrapping="Wrap" Margin="2,2,2,2" TextChanged="FindAccount_TextChanged" Text=""/>
+        <TextBox x:Name="FindAccount"  Grid.Row="10" TextWrapping="Wrap" Margin="1,1,1,1" TextChanged="FindAccount_TextChanged" Text=""/>
         <Button Content="Save"  Margin="1,1,1,1" Grid.Row="12" BorderThickness="0,0,0,0" Background="#B2FF0000" Foreground="#FFFDFDFD" Click="Button_Click_1">
             <Button.Resources>
                 <Style TargetType="Border">

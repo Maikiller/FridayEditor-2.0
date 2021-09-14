@@ -14,7 +14,7 @@ namespace MuEditor.Database
             "FROM " +
             "accounts " +
             "WHERE " +
-            "accounts.account = '" + User.account + "' " +
+            "accounts.account = '" + User.accountAuth + "' " +
             "AND " +
             "accounts.password = '" + User.password + "'";
 
@@ -129,5 +129,182 @@ namespace MuEditor.Database
             "goblin_points = " + Character.goblin_points + " " +
             "WHERE " +
             "name = '" + Character.name + "'";
+
+        public string loadShopTemplate =
+            "SELECT " +
+            "shop_template.guid," +
+            "shop_template.name as `Shop Name`" +
+            "FROM " +
+            "shop_template";
+
+        public string loadMonsterTemplate =
+            "SELECT " +
+            "monster_template.model," +
+            "monster_template.name as `Models Name`" +
+            "FROM " +
+            "monster_template";
+
+        public string loadShopName =
+            "SELECT " +
+            "shop_template.guid," +
+            "monster.spawn_delay," +
+            "monster.spawn_distance," +
+            "monster.respawn_time_min," +
+            "monster.respawn_time_max," +
+            "monster.respawn_id," +
+            "monster.move_distance," +
+            "monster.x1," +
+            "monster.y1," +
+            "monster.x2," +
+            "monster.y2," +
+            "monster.elemental_attribute," +
+            "monster.direction," +
+            "shop_template.pk_text," +
+            "monster.disabled," +
+            "world_template.name " +
+            "AS " +
+            "World," +
+            "monster_template.name," +
+            "shop_template.max_pk_level," +
+            "monster.server " +
+            "FROM " +
+            "shop_template " +
+            "INNER JOIN " +
+            "monster " +
+            "ON " +
+            "shop_template.name = monster.npc_function " +
+            "INNER JOIN " +
+            "world_template " +
+            "ON " +
+            "monster.world = world_template.entry " +
+            "INNER JOIN " +
+            "monster_template " +
+            "ON " +
+            "monster.id = monster_template.model " +
+            "WHERE " +
+            "shop_template.name = '" + Shop.shopName + "'";
+
+        public string saveModelsFavorite =
+            "INSERT INTO " +
+            "favorite_models " +
+            "(guid, models) VALUES (" + Favorite.AccountGUID + ", " + Favorite.Models + ")";
+
+        public string duplicateFavorite =
+            "SELECT " +
+            "favorite_models.models " +
+            "FROM " +
+            "favorite_models " +
+            "WHERE " +
+            "favorite_models.models = " + Favorite.Models + "";
+
+        public string selectAccountAuth =
+            "SELECT " +
+            "accounts.guid " +
+            "FROM accounts " +
+            "WHERE " +
+            "accounts.account = '" + User.accountAuth + "'";
+
+        public string loadFavorite =
+            "SELECT monster_template.name as `Favorite`,favorite_models.models " +
+            "FROM " +
+            "mu_editor_config.favorite_models " +
+            "INNER JOIN " +
+            "mu_game.monster_template " +
+            "ON " +
+            "favorite_models.models = monster_template.model " +
+            "WHERE " +
+            "favorite_models.guid = " + Favorite.AccountGUID + "";
+
+        public string loadWorldName =
+            "SELECT world_template.name " +
+            "FROM " +
+            "world_template";
+
+        public string saveShop =
+            "INSERT INTO shop_template (name, max_pk_level, pk_text, guid, flag, type, max_buy_count, max_buy_type) " +
+            "VALUES " +
+            "('" + Shop.shopName + "', " + Shop.pkLevel + ", '" + Shop.pkText + "', " + Shop.shopID + ", 0, 0, 0, 0); " +
+            "INSERT INTO monster (server, guid, id, world, x1, y1, x2, y2, direction, spawn_delay, spawn_distance, respawn_time_min, respawn_time_max, respawn_id, move_distance, npc_function, elemental_attribute, disabled) " +
+            "VALUES (" + Shop.server + ", " + Shop.monsterID + ", " + Shop.modelsID + ", " + Shop.worldID + ", " + Shop.x1 + ", " + Shop.y1 + ", " + Shop.x2 + ", " + Shop.y2 + ", " + Shop.direction + ", " + Shop.spawnDelay + ", " + Shop.spawnDistance + ", " + Shop.spawnTimeMin + ", " + Shop.spawnTimeMax + ", " + Shop.spawnId + ", " + Shop.moveDistance + ", '" + Shop.shopName + "', " + Shop.elementalAtt + ", " + Shop.disable + ")";
+
+        public string loadServerCodeList =
+            "SELECT " +
+            "server_list.server " +
+            "FROM " +
+            "server_list";
+
+        public string getWorldEntry =
+            "SELECT world_template.entry " +
+            "FROM " +
+            "world_template " +
+            "WHERE " +
+            "world_template.name = '" + Shop.worldName + "'";
+
+        public string getLastGuidMonster =
+            "SELECT MAX(guid) FROM monster";
+
+        public string getLastGuidShop =
+            "SELECT MAX(guid) FROM shop_template";
+
+        public string getShopID =
+            "SELECT " +
+            "shop_template.guid " +
+            "FROM " +
+            "shop_template " +
+            "WHERE " +
+            "shop_template.name = '" + Shop.shopName + "'";
+
+        public string getMonsterID =
+            "SELECT monster.guid " +
+            "FROM " +
+            "monster " +
+            "WHERE " +
+            "monster.npc_function = '" + Shop.shopName + "'";
+
+        public string deleteShop =
+            "DELETE " +
+            "FROM " +
+            "monster " +
+            "WHERE " +
+            "guid = " + Shop.monsterID + "; " +
+            "DELETE " +
+            "FROM " +
+            "shop_template " +
+            "WHERE " +
+            "guid = " + Shop.guid + ";";
+
+        public string updateShop =
+            "UPDATE " +
+            "shop_template " +
+            "SET " +
+            "name = '" + Shop.shopName + "'," +
+            "max_pk_level = " + Shop.pkLevel + "," +
+            "pk_text = '" + Shop.pkText + "' " +
+            "WHERE " +
+            "guid = " + Shop.shopID + ";  " +
+            "UPDATE " +
+            "monster " +
+            "SET " +
+            "server = " + Shop.server + "," +
+            "id = " + Shop.modelsID + "," +
+            "world = " + Shop.worldID + "," +
+            "x1 = " + Shop.x1 + "," +
+            "y1 = " + Shop.y1 + "," +
+            "x2 = " + Shop.x2 + "," +
+            "y2 = " + Shop.y2 + "," +
+            "direction = " + Shop.direction + "," +
+            "spawn_delay = " + Shop.spawnDelay + "," +
+            "spawn_distance = " + Shop.spawnDistance + "," +
+            "respawn_time_min = " + Shop.spawnTimeMin + "," +
+            "respawn_time_max = " + Shop.spawnTimeMax + "," +
+            "respawn_id = " + Shop.spawnId + "," +
+            "move_distance = " + Shop.moveDistance + "," +
+            "npc_function = '" + Shop.shopName + "'," +
+            "elemental_attribute = " + Shop.elementalAtt + "," +
+            "disabled = " + Shop.disable + " " +
+            "WHERE " +
+            "guid = " + Shop.monsterID + ";";
+
+
     }
 }

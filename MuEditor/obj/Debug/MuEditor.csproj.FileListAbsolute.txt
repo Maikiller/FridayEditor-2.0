@@ -84,3 +84,5 @@ C:\Users\maiki\source\repos\MuEditor\MuEditor\obj\Debug\Forms\Utils\MessageBoxCu
 C:\Users\maiki\source\repos\MuEditor\MuEditor\obj\Debug\Forms\Utils\MessageBoxCustomError.g.cs
 C:\Users\maiki\source\repos\MuEditor\MuEditor\obj\Debug\Forms\Utils\MessageBoxCustomCheck.baml
 C:\Users\maiki\source\repos\MuEditor\MuEditor\obj\Debug\Forms\Utils\MessageBoxCustomError.baml
+C:\Users\maiki\source\repos\MuEditor\MuEditor\obj\Debug\Forms\Utils\MessageBoxCustomAlert.g.cs
+C:\Users\maiki\source\repos\MuEditor\MuEditor\obj\Debug\Forms\Utils\MessageBoxCustomAlert.baml

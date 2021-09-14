@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\maiki\source\repos\MuEditor\MuEditor\App.xaml
-231906346999
+24-659299598
 
-32-1742942084
+35-1255794815
 139-880530153
-Forms\DatabaseConfig.xaml;Forms\FormsAdministrador\Accounts.xaml;Forms\FormsAdministrador\Characters.xaml;Forms\FormsAdministrador\Events.xaml;Forms\FormsAdministrador\Guild.xaml;Forms\FormsAdministrador\Main.xaml;Forms\FormsAdministrador\MiniMapEditor.xaml;Forms\FormsAdministrador\ServerSettings.xaml;Forms\FormsAdministrador\ShopCreate.xaml;Forms\FormsAdministrador\ShopEditor.xaml;Forms\FormsAdministrador\Spots.xaml;Forms\FormsAdministrador\SubServerCreate.xaml;Forms\FormsAdministrador\TeleportCreate.xaml;Forms\FormsUsers\Account.xaml;Forms\FormsUsers\Character.xaml;Forms\FormsUsers\Commands.xaml;Forms\FormsUsers\Events.xaml;Forms\FormsUsers\Guild.xaml;Forms\FormsUsers\Tickets.xaml;Forms\Login.xaml;Forms\FormsUsers\Main.xaml;Forms\Utils\MessageBoxCustomCheck.xaml;Forms\Utils\MessageBoxCustomError.xaml;
+Forms\DatabaseConfig.xaml;Forms\FormsAdministrador\Accounts.xaml;Forms\FormsAdministrador\Characters.xaml;Forms\FormsAdministrador\Events.xaml;Forms\FormsAdministrador\Guild.xaml;Forms\FormsAdministrador\Main.xaml;Forms\FormsAdministrador\MiniMapEditor.xaml;Forms\FormsAdministrador\ServerSettings.xaml;Forms\FormsAdministrador\ShopCreate.xaml;Forms\FormsAdministrador\ShopEditor.xaml;Forms\FormsAdministrador\Spots.xaml;Forms\FormsAdministrador\SubServerCreate.xaml;Forms\FormsAdministrador\TeleportCreate.xaml;Forms\FormsUsers\Account.xaml;Forms\FormsUsers\Character.xaml;Forms\FormsUsers\Commands.xaml;Forms\FormsUsers\Events.xaml;Forms\FormsUsers\Guild.xaml;Forms\FormsUsers\Tickets.xaml;Forms\Login.xaml;Forms\FormsUsers\Main.xaml;Forms\Utils\MessageBoxCustomAlert.xaml;Forms\Utils\MessageBoxCustomCheck.xaml;Forms\Utils\MessageBoxCustomError.xaml;
 
 False
 

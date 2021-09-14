@@ -19,8 +19,9 @@ namespace MuEditor
 
         private void LoginUser()
         {
-            User.account = Account.Text;
+            User.accountAuth = AccountA.Text;
             User.password = Password.Text;
+            
             Main main = new();
             /*if (Account.Text == "admin")
             {

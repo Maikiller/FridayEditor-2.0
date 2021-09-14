@@ -5,11 +5,128 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MuEditor.Forms.FormsAdministrador"
         mc:Ignorable="d"
-        Title="ShopCreate" Height="450" Width="800" WindowStartupLocation="CenterScreen" AllowsTransparency="True" WindowStyle="None" MouseDown="Window_MouseDown" Foreground="#FFFFFFFF">
+        Title="ShopCreate" Height="789" Width="549" WindowStartupLocation="CenterScreen" AllowsTransparency="True" WindowStyle="None" Foreground="#FFFFFFFF" Loaded="Window_Loaded" MouseDown="Window_MouseDown_1">
     <Window.Background>
         <SolidColorBrush  Opacity=".3" Color="Black"></SolidColorBrush>
     </Window.Background>
     <Grid>
-        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="159.649"/>
+            <ColumnDefinition Width="30"/>
+            <ColumnDefinition Width="60"/>
+            <ColumnDefinition Width="60"/>
+            <ColumnDefinition Width="60"/>
+            <ColumnDefinition Width="74"/>
+            <ColumnDefinition Width="60"/>
+            <ColumnDefinition Width="21.351"/>
+            <ColumnDefinition Width="24.649"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0"/>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="172"/>
+            <RowDefinition Height="15"/>
+            <RowDefinition Height="34"/>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="163.999"/>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="31.544"/>
+            <RowDefinition/>
+            <RowDefinition Height="0*"/>
+        </Grid.RowDefinitions>
+        <DataGrid x:Name="DatagridShop"  Margin="1,1,1,1" BorderThickness="0,0,0,0" Background="#B2FF0000" ColumnWidth="*" CanUserAddRows="False" CanUserResizeRows="False" CanUserDeleteRows="False" IsReadOnly="True" SelectionMode="Single" Grid.Row="2" Grid.RowSpan="7" SelectionChanged="DatagridShop_SelectionChanged" />
+        <TextBlock  Margin="1,1,1,1" TextWrapping="Wrap" Text="Find Shop" Foreground="#FFFFFFFF" Grid.Row="9"/>
+        <TextBox x:Name="FindShop" TextWrapping="Wrap"  Width="auto" Height="auto" Margin="1,1,1,1" Grid.Row="10" TextChanged="FindCharacters_TextChanged"/>
+        <Button Content="Update"  Margin="1,1,1,1" BorderThickness="0,0,0,0" Background="#B2FF0000" Foreground="#FFFDFDFD" Grid.Row="12" Click="update">
+            <Button.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="5"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+        <CheckBox x:Name="DisableShop" Content="Disable Shop" Margin="1,1,1,1" Foreground="#FFFFFFFF" Grid.Row="11"/>
+        <TextBlock  Margin="1,1,1,1" TextWrapping="Wrap" Text="NPC Shop" Foreground="#FFFFFFFF" Grid.RowSpan="2"/>
+        <Button Content="Delete"  Margin="1,1,1,1" BorderThickness="0,0,0,0" Background="#B2FF0000" Foreground="#FFFDFDFD" Grid.Row="13" Click="Button_Click">
+            <Button.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="5"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+        <TextBlock  Margin="1,1,1,1" TextWrapping="Wrap" Text="Model 3D" Foreground="#FFFFFFFF" Grid.RowSpan="2" Grid.Column="2"/>
+        <MediaElement Grid.Column="1" Margin="1,1,1,1" Grid.Row="2" Grid.ColumnSpan="6"/>
+        <DataGrid x:Name="DatagridMonsterModels"  Margin="1,1,1,1" BorderThickness="0,0,0,0" Background="#B2FF0000" ColumnWidth="*" CanUserAddRows="False" CanUserResizeRows="False" CanUserDeleteRows="False" IsReadOnly="True" SelectionMode="Single" Grid.Row="4" Grid.Column="2" Grid.ColumnSpan="3" SelectionChanged="DatagridMonsterModels_SelectionChanged" Grid.RowSpan="3" />
+        <TextBlock  Margin="1,1,1,1" TextWrapping="Wrap" Text="Spawn Delay" Foreground="#FFFFFFFF" Grid.Row="9" Grid.Column="2" FontSize="8"/>
+        <TextBox x:Name="SpawnDelay" TextWrapping="Wrap"  Width="auto" Height="auto" Margin="1,1,1,1" Grid.Row="10" Grid.Column="2" Text="0"/>
+        <TextBlock  Margin="1,1,1,1" TextWrapping="Wrap" Text="Spawn Distance" Foreground="#FFFFFFFF" Grid.Row="9" Grid.Column="3" FontSize="8"/>
+        <TextBox x:Name="SpawnDistance" TextWrapping="Wrap"  Width="auto" Height="auto" Margin="1,1,1,1" Grid.Row="10" Grid.Column="3" Text="0"/>
+        <TextBlock  Margin="1,1,1,1" TextWrapping="Wrap" Text="Spawn Time Min" Foreground="#FFFFFFFF" Grid.Row="9" Grid.Column="4" FontSize="7"/>
+        <TextBox x:Name="SpawnTimeMin" TextWrapping="Wrap"  Width="auto" Height="auto" Margin="1,1,1,1" Grid.Row="10" Grid.Column="4" Text="0"/>
+        <TextBlock  Margin="1,1,1,1" TextWrapping="Wrap" Text="Spawn Time Max" Foreground="#FFFFFFFF" Grid.Row="11" Grid.Column="2" FontSize="7"/>
+        <TextBox x:Name="SpawnTimeMax" TextWrapping="Wrap"  Width="auto" Height="auto" Margin="1,1,1,1" Grid.Row="12" Grid.Column="2" Text="0"/>
+        <TextBlock  Margin="1,1,1,1" TextWrapping="Wrap" Text="Spawn ID" Foreground="#FFFFFFFF" Grid.Row="11" Grid.Column="3" FontSize="9"/>
+        <TextBox x:Name="SpawnID" TextWrapping="Wrap"  Width="auto" Height="auto" Margin="1,1,1,1" Grid.Row="12" Grid.Column="3" Text="0"/>
+        <TextBlock  Margin="1,1,1,1" TextWrapping="Wrap" Text="Move Distance" Foreground="#FFFFFFFF" Grid.Row="11" Grid.Column="4" FontSize="8"/>
+        <TextBox x:Name="MoveDistance" TextWrapping="Wrap"  Width="auto" Height="auto" Margin="1,1,1,1" Grid.Row="12" Grid.Column="4" Text="0"/>
+        <TextBlock  Margin="1,1,1,1" TextWrapping="Wrap" Text="x1" Foreground="#FFFFFFFF" Grid.Row="14" Grid.Column="2"/>
+        <TextBox x:Name="x1" TextWrapping="Wrap"  Width="auto" Height="auto" Margin="1,1,1,1" Grid.Row="15" Grid.Column="2" Text="0"/>
+        <TextBlock  Margin="1,1,1,1" TextWrapping="Wrap" Text="y1" Foreground="#FFFFFFFF" Grid.Row="14" Grid.Column="3"/>
+        <TextBox x:Name="y1" TextWrapping="Wrap"  Width="auto" Height="auto" Margin="1,1,1,1" Grid.Row="15" Grid.Column="3" Text="0"/>
+        <TextBlock  Margin="1,1,1,1" TextWrapping="Wrap" Text="x2" Foreground="#FFFFFFFF" Grid.Row="14" Grid.Column="4"/>
+        <TextBox x:Name="x2" TextWrapping="Wrap"  Width="auto" Height="auto" Margin="1,1,1,1" Grid.Row="15" Grid.Column="4" Text="0"/>
+        <TextBlock  Margin="1,1,1,1" TextWrapping="Wrap" Text="y2" Foreground="#FFFFFFFF" Grid.Row="14" Grid.Column="5"/>
+        <TextBox x:Name="y2" TextWrapping="Wrap"  Width="auto" Height="auto" Margin="1,1,1,1" Grid.Row="15" Grid.Column="5" Text="0"/>
+        <ComboBox x:Name="ComboServer" Grid.Column="2" Grid.Row="19" Margin="1,2,1,2" IsReadOnly="True" IsEditable="True"/>
+        <TextBlock  Margin="1,2,1,0" TextWrapping="Wrap" Text="Server" Foreground="#FFFFFFFF" Grid.Row="18" Grid.Column="2"/>
+        <TextBlock  Margin="1,1,1,1" TextWrapping="Wrap" Text="Model Name" Foreground="#FFFFFFFF" Grid.Column="3" FontSize="10" FontFamily="Yu Gothic UI" Grid.Row="3"/>
+        <TextBlock  Margin="1,2,1,0" TextWrapping="Wrap" Text="Shop Name" Foreground="#FFFFFFFF" Grid.Row="18" Grid.Column="3" Grid.ColumnSpan="2" FontSize="11"/>
+        <TextBox x:Name="SHOPName" TextWrapping="Wrap"  Width="auto" Height="auto" Margin="1,2,1,2" Grid.Row="19" Grid.Column="3" Grid.ColumnSpan="3"/>
+        <Button Content="New SHOP"  Margin="1,0,1,1" BorderThickness="0,0,0,0" Background="#B2FF0000" Foreground="#FFFDFDFD" Click="Button_Click_Save" Grid.Row="20" Grid.Column="2" Grid.ColumnSpan="4">
+            <Button.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="5"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+        <TextBox x:Name="PKText" TextWrapping="Wrap"  Width="auto" Height="auto" Margin="1,1,1,1" Grid.Row="10" Grid.Column="5" Grid.RowSpan="3"/>
+        <TextBlock  Margin="1,1,14,1" TextWrapping="Wrap" Text="PK Text" Foreground="#FFFFFFFF" Grid.Row="9" Grid.Column="5" Grid.ColumnSpan="2" FontSize="9"/>
+        <Button Content="Close"  Margin="1,0,1,1" BorderThickness="0,0,0,0" Background="#B2FF0000" Foreground="#FFFDFDFD" Click="Button_Click_Close" Grid.Row="20" Grid.Column="6" Grid.ColumnSpan="3">
+            <Button.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="5"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+        <TextBlock  Margin="1,1,1,1" TextWrapping="Wrap" Text="Find Models" Foreground="#FFFFFFFF" Grid.Row="7" Grid.Column="3" FontSize="10"/>
+        <TextBox x:Name="FindModels" TextWrapping="Wrap"  Width="auto" Height="auto" Margin="1,1,1,1" Grid.Row="8" Grid.Column="2" Grid.ColumnSpan="3" TextChanged="FindCharacters_Copy12_TextChanged"/>
+        <Button Content="Favorite"  Margin="1,1,1,1" BorderThickness="0,0,0,0" Background="#B2FF0000" Foreground="#FFFDFDFD" Click="Button_Click_Favorite" Grid.Row="8" Grid.Column="5">
+            <Button.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="5"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+        <TextBlock  Margin="1,1,1,1" TextWrapping="Wrap" Text="Favorite Models" Foreground="#FFFFFFFF" Grid.Row="5" Grid.Column="5" FontSize="10" Grid.ColumnSpan="2"/>
+        <DataGrid x:Name="DatagridFavorite"  Margin="1,1,1,1" BorderThickness="0,0,0,0" Background="#B2FF0000" ColumnWidth="*" CanUserAddRows="False" CanUserResizeRows="False" CanUserDeleteRows="False" IsReadOnly="True" SelectionMode="Single" Grid.Row="6" Grid.Column="5" Grid.ColumnSpan="3" SelectionChanged="DatagridFavorite_SelectionChanged" />
+        <TextBlock  Margin="1,1,1,1" TextWrapping="Wrap" Text="Elemental Atribute" Foreground="#FFFFFFFF" Grid.Row="16" Grid.Column="2" FontSize="7"/>
+        <TextBox x:Name="ElementalAtribute" TextWrapping="Wrap"  Width="auto" Height="auto" Margin="1,1,1,1" Grid.Row="17" Grid.Column="2" Text="0"/>
+        <TextBlock  Margin="1,1,1,1" TextWrapping="Wrap" Text="Direction" Foreground="#FFFFFFFF" Grid.Row="16" Grid.Column="3" FontSize="7"/>
+        <TextBox x:Name="Direction" TextWrapping="Wrap"  Width="auto" Height="auto" Margin="1,1,1,1" Grid.Row="17" Grid.Column="3" Text="0"/>
+        <TextBlock  Margin="1,1,1,1" TextWrapping="Wrap" Text="PK level Restrict" Foreground="#FFFFFFFF" Grid.Row="16" Grid.Column="4" FontSize="7"/>
+        <TextBox x:Name="PKLevel" TextWrapping="Wrap"  Width="auto" Height="auto" Margin="1,1,1,1" Grid.Row="17" Grid.Column="4" Text="0"/>
+        <ComboBox Name="ComboWorld" Grid.Column="5" Grid.Row="17" Margin="1,1,1,1" Grid.ColumnSpan="2" IsReadOnly="True" IsEditable="True"/>
+        <TextBlock  Margin="1,1,1,1" TextWrapping="Wrap" Text="World" Foreground="#FFFFFFFF" Grid.Row="16" Grid.Column="5" FontSize="7"/>
+
     </Grid>
 </Window>

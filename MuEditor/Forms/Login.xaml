@@ -25,7 +25,7 @@
             <RowDefinition Height="30*"/>
         </Grid.RowDefinitions>
         <ComboBox  Margin="2,2,2,2" FontFamily="Yu Gothic UI" FontSize="14" Grid.ColumnSpan="2" Grid.Row="2" />
-        <TextBox Name="Account" Margin="2,2,2,2" TextWrapping="Wrap" FontFamily="Yu Gothic UI" FontSize="14" Text="admin" Grid.ColumnSpan="2" Grid.Row="4" />
+        <TextBox Name="AccountA" Margin="2,2,2,2" TextWrapping="Wrap" FontFamily="Yu Gothic UI" FontSize="14" Text="admin" Grid.ColumnSpan="2" Grid.Row="4" />
         <TextBox Name="Password" Margin="2,2,2,2" TextWrapping="Wrap" FontFamily="Yu Gothic UI" FontSize="14" Text="8da193366e1554c08b2870c50f737b9587c3372b656151c4a96028af26f51334" Grid.ColumnSpan="2" Grid.Row="6" />
         <TextBlock  Margin="2,2,2,2" TextWrapping="Wrap" Text="Ambient" FontFamily="Yu Gothic UI" FontSize="14" Grid.Row="1" />
         <TextBlock  Margin="2,2,2,2" TextWrapping="Wrap" Text="Login" FontFamily="Yu Gothic UI" FontSize="14" Grid.Row="3" />
