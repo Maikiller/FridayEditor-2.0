@@ -38,9 +38,27 @@ namespace MuEditor.Models
         public static string npcFunction;
         public static int elementalAtt;
         public static int disable;
-
-
-
+    }
+    class Item
+    {
+        public static int typeItemCombo;
+        public static int typeItemSelect;
+        public static int indexItemSelect;
+        public static int itemGUID;
+        public static int level;
+        public static int durability;
+        public static int skill;
+        public static int luck;
+        public static int option;
+        public static int excellent;
+        public static int ancient;
+        public static int socket_1;
+        public static int socket_2;
+        public static int socket_3;
+        public static int socket_4;
+        public static int socket_5;
+        public static int price;
+        public static int id;
 
 
     }

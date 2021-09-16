@@ -305,6 +305,97 @@ namespace MuEditor.Database
             "WHERE " +
             "guid = " + Shop.monsterID + ";";
 
+        public string loadItemsShop =
+            "SELECT " +
+            "shop_items.type," +
+            "shop_items.guid," +
+            "item_template.name " +
+            "FROM shop_items " +
+            "INNER JOIN " +
+            "item_template " +
+            "ON " +
+            "shop_items.type = item_template.i_type " +
+            "AND " +
+            "shop_items.`index` = item_template.i_index " +
+            "INNER JOIN " +
+            "shop_template " +
+            "ON " +
+            "shop_items.shop = shop_template.guid " +
+            "WHERE " +
+            "shop_template.guid = " + Shop.guid + "";
+
+        public string loadItemCategory =
+           "SELECT " +
+           "item_template.i_index," +
+           "item_template.i_type," +
+           "item_template.name " +
+           "FROM " +
+           "item_template " +
+           "WHERE " +
+           "item_template.i_type = " + Item.typeItemCombo + "";
+
+        public string loadItem =
+            "SELECT " +
+            "item_template.name," +
+            "shop_items.level," +
+            "shop_items.durability," +
+            "shop_items.skill," +
+            "shop_items.luck," +
+            "shop_items.`option`," +
+            "shop_items.excellent," +
+            "shop_items.ancient," +
+            "shop_items.socket_1," +
+            "shop_items.socket_2," +
+            "shop_items.socket_3," +
+            "shop_items.socket_4," +
+            "shop_items.socket_5," +
+            "shop_items.price," +
+            "shop_items.id " +
+            "FROM shop_items " +
+            "INNER JOIN " +
+            "item_template " +
+            "ON " +
+            "shop_items.`index` = item_template.i_index " +
+            "AND " +
+            "shop_items.type = item_template.i_type " +
+            "INNER JOIN " +
+            "shop_template " +
+            "ON " +
+            "shop_items.shop = shop_template.guid " +
+            "WHERE " +
+            "shop_items.guid = " + Item.itemGUID + "";
+
+        public string additemToNPC =
+            "INSERT INTO shop_items (shop, type, `index`, level, durability, skill, luck, `option`, excellent, ancient, socket_1, socket_2, socket_3, socket_4, socket_5, price, id)" +
+            " VALUES(" + Shop.guid + ", " + Item.typeItemSelect + ", " + Item.indexItemSelect + ", " + Item.level + ", " + Item.durability + ", " + Item.skill + ", " + Item.luck + ", " + Item.option + ", " + Item.excellent + ", " + Item.ancient + ", " + Item.socket_1 + ", " + Item.socket_2 + ", " + Item.socket_3 + ", " + Item.socket_4 + ", " + Item.socket_5 + ", " + Item.price + ", " + Item.id + ")";
+
+        public string updateItemToNPC =
+            "UPDATE " +
+            "shop_items " +
+            "SET " +
+            "level = " + Item.level + "," +
+            "durability = " + Item.durability + "," +
+            "skill = " + Item.skill + "," +
+            "luck = " + Item.luck + "," +
+            "`option` = " + Item.option + "," +
+            "excellent = " + Item.excellent + "," +
+            "ancient = " + Item.ancient + "," +
+            "socket_1 = " + Item.socket_1 + "," +
+            "socket_2 = " + Item.socket_2 + "," +
+            "socket_3 = " + Item.socket_3 + "," +
+            "socket_4 = " + Item.socket_4 + "," +
+            "socket_5 = " + Item.socket_5 + "," +
+            "price = " + Item.price + "," +
+            "id = " + Item.id + " " +
+            "WHERE " +
+            "guid = " + Item.itemGUID + "";
+
+        public string deleteItemToNPC =
+            "DELETE " +
+            "FROM " +
+            "shop_items " +
+            "WHERE " +
+            "guid = " + Item.itemGUID + "";
 
     }
 }

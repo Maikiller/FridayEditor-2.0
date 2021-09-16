@@ -50,7 +50,6 @@ C:\Users\maiki\source\repos\MuEditor\MuEditor\obj\Debug\Forms\FormsAdministrador
 C:\Users\maiki\source\repos\MuEditor\MuEditor\obj\Debug\Forms\FormsAdministrador\MiniMapEditor.g.cs
 C:\Users\maiki\source\repos\MuEditor\MuEditor\obj\Debug\Forms\FormsAdministrador\ServerSettings.g.cs
 C:\Users\maiki\source\repos\MuEditor\MuEditor\obj\Debug\Forms\FormsAdministrador\ShopCreate.g.cs
-C:\Users\maiki\source\repos\MuEditor\MuEditor\obj\Debug\Forms\FormsAdministrador\ShopEditor.g.cs
 C:\Users\maiki\source\repos\MuEditor\MuEditor\obj\Debug\Forms\FormsAdministrador\Spots.g.cs
 C:\Users\maiki\source\repos\MuEditor\MuEditor\obj\Debug\Forms\FormsAdministrador\SubServerCreate.g.cs
 C:\Users\maiki\source\repos\MuEditor\MuEditor\obj\Debug\Forms\FormsAdministrador\TeleportCreate.g.cs
@@ -59,7 +58,6 @@ C:\Users\maiki\source\repos\MuEditor\MuEditor\obj\Debug\Forms\FormsAdministrador
 C:\Users\maiki\source\repos\MuEditor\MuEditor\obj\Debug\Forms\FormsAdministrador\MiniMapEditor.baml
 C:\Users\maiki\source\repos\MuEditor\MuEditor\obj\Debug\Forms\FormsAdministrador\ServerSettings.baml
 C:\Users\maiki\source\repos\MuEditor\MuEditor\obj\Debug\Forms\FormsAdministrador\ShopCreate.baml
-C:\Users\maiki\source\repos\MuEditor\MuEditor\obj\Debug\Forms\FormsAdministrador\ShopEditor.baml
 C:\Users\maiki\source\repos\MuEditor\MuEditor\obj\Debug\Forms\FormsAdministrador\Spots.baml
 C:\Users\maiki\source\repos\MuEditor\MuEditor\obj\Debug\Forms\FormsAdministrador\SubServerCreate.baml
 C:\Users\maiki\source\repos\MuEditor\MuEditor\obj\Debug\Forms\FormsAdministrador\TeleportCreate.baml
@@ -86,3 +84,6 @@ C:\Users\maiki\source\repos\MuEditor\MuEditor\obj\Debug\Forms\Utils\MessageBoxCu
 C:\Users\maiki\source\repos\MuEditor\MuEditor\obj\Debug\Forms\Utils\MessageBoxCustomError.baml
 C:\Users\maiki\source\repos\MuEditor\MuEditor\obj\Debug\Forms\Utils\MessageBoxCustomAlert.g.cs
 C:\Users\maiki\source\repos\MuEditor\MuEditor\obj\Debug\Forms\Utils\MessageBoxCustomAlert.baml
+C:\Users\maiki\source\repos\MuEditor\MuEditor\obj\Debug\Forms\FormsAdministrador\ShopItemEditor.g.cs
+C:\Users\maiki\source\repos\MuEditor\MuEditor\obj\Debug\Forms\FormsAdministrador\ShopItemEditor.baml
+C:\Users\maiki\source\repos\MuEditor\MuEditor\obj\Debug\MuEditor.csproj.SuggestedBindingRedirects.cache

@@ -160,7 +160,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Forms\FormsAdministrador\ShopEditor.xaml">
+    <Page Include="Forms\FormsAdministrador\ShopItemEditor.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -238,8 +238,8 @@
     <Compile Include="Forms\FormsAdministrador\ShopCreate.xaml.cs">
       <DependentUpon>ShopCreate.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Forms\FormsAdministrador\ShopEditor.xaml.cs">
-      <DependentUpon>ShopEditor.xaml</DependentUpon>
+    <Compile Include="Forms\FormsAdministrador\ShopItemEditor.xaml.cs">
+      <DependentUpon>ShopItemEditor.xaml</DependentUpon>
     </Compile>
     <Compile Include="Forms\FormsAdministrador\Spots.xaml.cs">
       <DependentUpon>Spots.xaml</DependentUpon>

@@ -72,7 +72,7 @@ namespace MuEditor.Forms.FormsAdministrador
 
         private void Button_Click_6(object sender, RoutedEventArgs e)
         {
-            ShopEditor shopEditor = new();
+            ShopItemEditor shopEditor = new();
             shopEditor.Show();
         }
 
