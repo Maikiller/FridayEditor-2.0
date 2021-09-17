@@ -1,4 +1,5 @@
 ﻿using MuEditor.Database;
+using MuEditor.Forms.Utils;
 using MuEditor.Models;
 using System;
 using System.Collections.Generic;
@@ -62,9 +63,10 @@ namespace MuEditor.Forms.FormsAdministrador
             LoadDataBase();
         }
 
-
         private void LoadShopItems()
         {
+            if (ComboNPC.Text == "")
+                return;
 
             Shop.shopName = ComboNPC.Text;
             Query query = new();
@@ -72,14 +74,17 @@ namespace MuEditor.Forms.FormsAdministrador
                 Shop.guid = int.Parse(Connect.LoadData(query.getShopID).Rows[0].ItemArray[0].ToString());
 
             Query query1 = new();
-            DatagridShop.ItemsSource = Connect.LoadData(query1.loadItemsShop).DefaultView;
-            DatagridShop.Columns[0].Visibility = Visibility.Hidden;
-            DatagridShop.Columns[1].Visibility = Visibility.Hidden;
+            if (Connect.LoadData(query1.loadItemsShop).Rows.Count > 0)
+            {
+                DatagridShop.ItemsSource = Connect.LoadData(query1.loadItemsShop).DefaultView;
+                DatagridShop.Columns[0].Visibility = Visibility.Hidden;
+                DatagridShop.Columns[1].Visibility = Visibility.Hidden;
+            }
         }
 
         private void ComboNPC_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            //LoadShopItems();
+            LoadShopItems();
         }
 
         private void ComboNPC_DropDownClosed(object sender, EventArgs e)
@@ -89,11 +94,14 @@ namespace MuEditor.Forms.FormsAdministrador
 
         private void LoadItemType()
         {
+            if (ComboTypeItem.SelectedIndex == -1)
+                return;
+
             Item.typeItemCombo = ComboTypeItem.SelectedIndex;
             Query query = new();
             DatagridItems.ItemsSource = Connect.LoadData(query.loadItemCategory).DefaultView;
-            //DatagridItems.Columns[0].Visibility = Visibility.Hidden;
-
+            DatagridItems.Columns[0].Visibility = Visibility.Hidden;
+            DatagridItems.Columns[1].Visibility = Visibility.Hidden;
         }
         private void ComboTypeItem_DropDownClosed(object sender, EventArgs e)
         {
@@ -387,9 +395,9 @@ namespace MuEditor.Forms.FormsAdministrador
                     Statics.Document.Blocks.Add(new Paragraph(new Run("Increase 5 Atacck(Wizard)Speed")));
                 }
             }
-           
 
-           
+
+
             //Statics.Document.PageWidth = 1000;
             LoadTypeItem();
         }
@@ -426,6 +434,25 @@ namespace MuEditor.Forms.FormsAdministrador
 
         private void InputsPopulate()
         {
+            MessageBoxCustomError boxCustomError = new();
+
+            if (
+                Level.Text == "" ||
+                Quant.Text == "" ||
+                Positon.Text == "" ||
+                Option.Text == "" ||
+                Slot1.Text == "" ||
+                Slot2.Text == "" ||
+                Slot3.Text == "" ||
+                Slot4.Text == "" ||
+                Slot5.Text == "" ||
+                Price.Text == "")
+            {
+                boxCustomError.CustomMessage.Text = "Invalid Atribute";
+                boxCustomError.Show();
+                return;
+            }
+
             int Check1 = option1.IsChecked == true ? 1 : 0;
             int Check2 = option2.IsChecked == true ? 2 : 0;
             int Check3 = option3.IsChecked == true ? 4 : 0;
@@ -462,7 +489,24 @@ namespace MuEditor.Forms.FormsAdministrador
 
         private void AddItemToNPC()
         {
+            MessageBoxCustomAlert customAlert = new();
+            MessageBoxCustomError customError = new();
+            if (Item.typeItemSelect == null || Item.indexItemSelect == null)
+            {
+                customError.CustomMessage.Text = "No item Selected";
+                customError.ShowDialog();
+                return;
+            }
+
+
+            Config.applicationAlert = true;
             InputsPopulate();
+
+            customAlert.CustomMessage.Text = "ADD Item ? [" + Shop.shopName + "]";
+            customAlert.ShowDialog();
+
+            if (Config.applicationAlert == false)
+                return;
 
             Query query = new();
             Connect.Update(query.additemToNPC);
@@ -477,6 +521,14 @@ namespace MuEditor.Forms.FormsAdministrador
 
         private void UpdateItemToNPC()
         {
+            MessageBoxCustomError customError = new();
+            if (Item.typeItemSelect == null || Item.indexItemSelect == null)
+            {
+                customError.CustomMessage.Text = "No item Selected";
+                customError.ShowDialog();
+                return;
+            }
+
             InputsPopulate();
 
             Query query = new();
@@ -497,7 +549,7 @@ namespace MuEditor.Forms.FormsAdministrador
         private void Button_Click_3(object sender, RoutedEventArgs e)
         {
             DeleteItemToNPC();
-           
+
         }
     }
 }
