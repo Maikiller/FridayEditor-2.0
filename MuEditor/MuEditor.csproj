@@ -304,6 +304,7 @@
     </Compile>
     <Compile Include="Models\Character.cs" />
     <Compile Include="Models\Favorite.cs" />
+    <Compile Include="Models\MonsterSpot.cs" />
     <Compile Include="Models\Shop.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">

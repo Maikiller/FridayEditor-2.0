@@ -5,11 +5,101 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MuEditor.Forms.FormsAdministrador"
         mc:Ignorable="d"
-        Title="Spots" Height="450" Width="800" WindowStartupLocation="CenterScreen" AllowsTransparency="True" WindowStyle="None" MouseDown="Window_MouseDown" Foreground="#FFFFFFFF">
+        Title="Spots" Height="450" Width="479" WindowStartupLocation="CenterScreen" AllowsTransparency="True" WindowStyle="None" MouseDown="Window_MouseDown" Foreground="#FFFFFFFF" Loaded="Window_Loaded">
     <Window.Background>
         <SolidColorBrush  Opacity=".3" Color="Black"></SolidColorBrush>
     </Window.Background>
     <Grid>
-        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0*"/>
+            <ColumnDefinition Width="40"/>
+            <ColumnDefinition Width="40"/>
+            <ColumnDefinition Width="40"/>
+            <ColumnDefinition Width="40"/>
+            <ColumnDefinition Width="40"/>
+            <ColumnDefinition Width="40"/>
+            <ColumnDefinition Width="40"/>
+            <ColumnDefinition Width="50"/>
+            <ColumnDefinition Width="50"/>
+            <ColumnDefinition Width="50"/>
+            <ColumnDefinition Width="50"/>
+            <ColumnDefinition Width="0*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0"/>
+            <RowDefinition Height="25"/>
+            <RowDefinition Height="200"/>
+            <RowDefinition Height="25"/>
+            <RowDefinition Height="25"/>
+            <RowDefinition Height="25"/>
+            <RowDefinition Height="25"/>
+            <RowDefinition Height="25"/>
+            <RowDefinition Height="25"/>
+            <RowDefinition Height="25"/>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition/>
+            <RowDefinition Height="0*"/>
+        </Grid.RowDefinitions>
+        <DataGrid x:Name="DatagridMonster" Margin="1,1,1,1" BorderThickness="0,0,0,0" Background="#B2FF0000" ColumnWidth="*" CanUserAddRows="False" CanUserResizeRows="False" CanUserDeleteRows="False" IsReadOnly="True" SelectionMode="Single" Grid.Row="2" Grid.ColumnSpan="11" Grid.Column="1" SelectionChanged="DatagridMonster_SelectionChanged" />
+        <TextBlock  Margin="1,1,1,1" TextWrapping="Wrap" Text="Spot Monster EDITOR" Foreground="#FFFFFFFF" Grid.RowSpan="2" Grid.Column="1" Grid.ColumnSpan="3"/>
+        <TextBlock  Margin="1,1,1,1" TextWrapping="Wrap" Text="Find Spot World" Foreground="#FFFFFFFF" Grid.Row="5" Grid.Column="1" Grid.ColumnSpan="2" FontSize="10"/>
+        <TextBlock  Margin="1,1,1,1" TextWrapping="Wrap" Text="World" Foreground="#FFFFFFFF" Grid.Row="3" Grid.Column="4" Grid.ColumnSpan="3"/>
+        <TextBlock  Margin="1,1,1,1" TextWrapping="Wrap" Text="Monster" Foreground="#FFFFFFFF" Grid.Row="3" Grid.Column="7" Grid.ColumnSpan="4"/>
+        <TextBlock  Margin="1,1,1,1" TextWrapping="Wrap" Text="Delete" Foreground="#FFFFFFFF" Grid.Row="3" Grid.Column="11"/>
+        <ComboBox x:Name="filterMonsterWorld"  Grid.Row="6" Margin="1,1,0,1" IsReadOnly="True" IsEditable="True" Grid.Column="1" Grid.ColumnSpan="2" DropDownClosed="filterMonsterWorld_DropDownClosed"/>
+        <ComboBox x:Name="ComboWorld"   Grid.Row="4" Margin="1,1,1,1" IsReadOnly="True" IsEditable="True" Grid.Column="4" Grid.ColumnSpan="3" DropDownClosed="ComboBox_DropDownClosed"/>
+        <ComboBox x:Name="ComboMonster"  Grid.Row="4" Margin="1,1,1,1" IsReadOnly="True" IsEditable="True" Grid.Column="7" Grid.ColumnSpan="3" DropDownClosed="ComboMonster_DropDownClosed"/>
+        <TextBox x:Name="delete"   TextWrapping="Wrap" Height="auto" Margin="1,1,1,1" Grid.Row="4" Grid.Column="11"/>
+        <Button     Content="Delete"  Margin="1,1,1,1" BorderThickness="0,0,0,0" Background="#B2FF0000" Foreground="#FFFDFDFD" Grid.Row="5" Grid.Column="11" FontSize="10" Click="Button_Click_2">
+            <Button.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="5"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+        <TextBlock  Margin="1,1,1,1" TextWrapping="Wrap" Text="Server" Foreground="#FFFFFFFF" Grid.Row="3" Grid.Column="1"/>
+        <ComboBox x:Name="ComboServer"   Grid.Row="4" Margin="1,1,1,1" IsReadOnly="True" IsEditable="True" Grid.Column="1" DropDownClosed="ComboServer_DropDownClosed"/>
+        <TextBlock  Margin="1,1,1,1" TextWrapping="Wrap" Text="x1" Foreground="#FFFFFFFF" Grid.Row="6" Grid.Column="4"/>
+        <TextBlock  Margin="1,1,1,1" TextWrapping="Wrap" Text="y1" Foreground="#FFFFFFFF" Grid.Row="6" Grid.Column="5"/>
+        <TextBlock  Margin="1,1,1,1" TextWrapping="Wrap" Text="Direction" Foreground="#FFFFFFFF" Grid.Row="6" Grid.Column="6" FontSize="9"/>
+        <TextBox x:Name="x1"    TextWrapping="Wrap"  Width="auto" Height="auto" Margin="1,1,1,1" Grid.Row="7" Grid.Column="4"/>
+        <TextBox  x:Name="y1"  TextWrapping="Wrap"  Width="auto" Height="auto" Margin="1,1,1,1" Grid.Row="7" Grid.Column="5"/>
+        <TextBox  x:Name="direciton"  TextWrapping="Wrap"  Width="auto" Height="auto" Margin="1,1,1,1" Grid.Row="7" Grid.Column="6"/>
+        <TextBlock  Margin="1,1,1,1" TextWrapping="Wrap" Text="Respawn ID" Foreground="#FFFFFFFF" Grid.Row="6" Grid.Column="7" FontSize="8"/>
+        <TextBlock  Margin="1,1,1,1" TextWrapping="Wrap" Text="Move Distance" Foreground="#FFFFFFFF" Grid.Row="6" Grid.Column="8" FontSize="8"/>
+        <TextBlock  Margin="1,1,1,1" TextWrapping="Wrap" Text="Elemental Atribute" Foreground="#FFFFFFFF" Grid.Row="6" Grid.Column="9" FontSize="8"/>
+        <TextBox  x:Name="respawnID"  TextWrapping="Wrap"  Width="auto" Height="auto" Margin="1,1,1,1" Grid.Row="7" Grid.Column="7"/>
+        <TextBox x:Name="moveDistance"   TextWrapping="Wrap"  Width="auto" Height="auto" Margin="1,1,1,1" Grid.Row="7" Grid.Column="8"/>
+        <TextBox  x:Name="elementalAtt"  TextWrapping="Wrap"  Width="auto" Height="auto" Margin="1,1,1,1" Grid.Row="7" Grid.Column="9"/>
+        <TextBlock  Margin="1,1,1,1" TextWrapping="Wrap" Text="x2" Foreground="#FFFFFFFF" Grid.Row="8" Grid.Column="4"/>
+        <TextBlock  Margin="1,1,1,1" TextWrapping="Wrap" Text="y2" Foreground="#FFFFFFFF" Grid.Row="8" Grid.Column="5"/>
+        <TextBlock  Margin="1,1,1,1" TextWrapping="Wrap" Text="Spawn Delay" Foreground="#FFFFFFFF" Grid.Row="8" Grid.Column="6" FontSize="9"/>
+        <TextBox  x:Name="x2"  TextWrapping="Wrap"  Width="auto" Height="auto" Margin="1,1,1,1" Grid.Row="9" Grid.Column="4"/>
+        <TextBox  x:Name="y2"  TextWrapping="Wrap"  Width="auto" Height="auto" Margin="1,1,1,1" Grid.Row="9" Grid.Column="5"/>
+        <TextBox  x:Name="spawnDelay"  TextWrapping="Wrap"  Width="auto" Height="auto" Margin="1,1,1,1" Grid.Row="9" Grid.Column="6"/>
+        <TextBlock  Margin="1,1,1,1" TextWrapping="Wrap" Text="Time Min" Foreground="#FFFFFFFF" Grid.Row="8" Grid.Column="7" FontSize="9"/>
+        <TextBlock  Margin="1,1,1,1" TextWrapping="Wrap" Text="Time Max" Foreground="#FFFFFFFF" Grid.Row="8" Grid.Column="8" FontSize="10"/>
+        <TextBlock  Margin="1,1,1,1" TextWrapping="Wrap" Text="Distance" Foreground="#FFFFFFFF" Grid.Row="8" Grid.Column="9" FontSize="10"/>
+        <TextBox  x:Name="timeMin"  TextWrapping="Wrap"  Width="auto" Height="auto" Margin="1,1,1,1" Grid.Row="9" Grid.Column="7"/>
+        <TextBox  x:Name="timeMax"  TextWrapping="Wrap"  Width="auto" Height="auto" Margin="1,1,1,1" Grid.Row="9" Grid.Column="8"/>
+        <TextBox   x:Name="distance" TextWrapping="Wrap"  Width="auto" Height="auto" Margin="1,1,1,1" Grid.Row="9" Grid.Column="9"/>
+        <TextBlock  Margin="1,1,1,1" TextWrapping="Wrap" Text="Item Bag" Foreground="#FFFFFFFF" Grid.Row="10" Grid.Column="8" Grid.ColumnSpan="2" FontSize="10"/>
+        <TextBox x:Name="itemBag"   TextWrapping="Wrap"  Width="auto" Height="auto" Margin="1,1,1,1" Grid.Row="11" Grid.Column="8" Grid.ColumnSpan="2"/>
+        <Button     Content="Add"  Margin="1,1,1,1" BorderThickness="0,0,0,0" Background="#B2FF0000" Foreground="#FFFDFDFD" Grid.Row="11" Grid.Column="5" FontSize="10" Grid.ColumnSpan="3" Click="Button_Click_1">
+            <Button.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="5"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+        <Button     Content="Close"  Margin="1,1,1,1" BorderThickness="0,0,0,0" Background="#B2FF0000" Foreground="#FFFDFDFD" Grid.Row="11" Grid.Column="11" FontSize="10" Click="Button_Click">
+            <Button.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="5"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+
     </Grid>
 </Window>

@@ -397,5 +397,39 @@ namespace MuEditor.Database
             "WHERE " +
             "guid = " + Item.itemGUID + "";
 
+        public string addMonsterSpot =
+            "INSERT INTO monster (server, guid, id, world, x1, y1, x2, y2, direction, spawn_delay, spawn_distance, respawn_time_min, respawn_time_max, respawn_id, move_distance, itembag, elemental_attribute, disabled)" +
+            "VALUES(" + MonsterSpot.server + ", " + MonsterSpot.guid + ", " + MonsterSpot.id + ", " + MonsterSpot.worldEntry + ", " + MonsterSpot.x1 + ", " +
+            "" + MonsterSpot.y1 + ", " + MonsterSpot.x2 + ", " + MonsterSpot.y2 + ", " +
+            "" + MonsterSpot.direction + ", " + MonsterSpot.spawnDelay + ", " + MonsterSpot.spawnDelay + ", " +
+            "" + MonsterSpot.spawnDistance + ", " + MonsterSpot.respawnTimeMin + ", " + MonsterSpot.respawnTimeMax + ", " +
+            "" + MonsterSpot.moveDistance + ", '" + MonsterSpot.itemBag + "', " + MonsterSpot.elementalAtt + ", " + MonsterSpot.disable + ")";
+
+        public string DeleteMonsterSpot =
+            "DELETE " +
+            "FROM " +
+            "monster " +
+            "WHERE " +
+            "guid = " + MonsterSpot.guid + "";
+
+        public string filterMonsterWorld =
+            "SELECT " +
+            "monster_template.name," +
+            "world_template.name," +
+            "monster.x1," +
+            "monster.y1," +
+            "monster.guid " +
+            "FROM monster " +
+            "INNER " +
+            "JOIN world_template " +
+            "ON " +
+            "monster.world = world_template.entry " +
+            "INNER JOIN " +
+            "monster_template " +
+            "ON " +
+            "monster.id = monster_template.model " +
+            "WHERE world_template.name = '" + MonsterSpot.worldName + "' " +
+            "and monster.server = " + MonsterSpot.server + "";
+
     }
 }

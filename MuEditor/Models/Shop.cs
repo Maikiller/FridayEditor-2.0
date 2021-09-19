@@ -41,10 +41,11 @@ namespace MuEditor.Models
     }
     class Item
     {
+        public static string name;
         public static int? typeItemCombo;
         public static int? typeItemSelect;
         public static int? indexItemSelect;
-        public static int itemGUID;
+        public static int? itemGUID;
         public static int level;
         public static int durability;
         public static int skill;

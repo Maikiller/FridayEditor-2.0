@@ -313,7 +313,7 @@ namespace MuEditor.Forms.FormsAdministrador
 
         private void update(object sender, RoutedEventArgs e)
         {
-            MessageBoxCustomAlert customAlert = new();
+
             MessageBoxCustomError customError = new();
             if (SHOPName.Text == "")
             {
@@ -323,11 +323,6 @@ namespace MuEditor.Forms.FormsAdministrador
             }
 
             Config.applicationAlert = true;
-            customAlert.CustomMessage.Text = "Are you sure to update the [" + Shop.shopName + "]";
-            customAlert.ShowDialog();
-
-            if (Config.applicationAlert == false)
-                return;
 
             LoadInputs();
             Query query = new();
@@ -335,6 +330,11 @@ namespace MuEditor.Forms.FormsAdministrador
             LoadDatabase();
         }
 
-
+        private void DatagridShop_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            ShopItemEditor shop = new();
+            shop.ComboNPC.Text = Shop.shopName;
+            shop.ShowDialog();
+        }
     }
 }

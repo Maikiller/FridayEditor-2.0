@@ -45,7 +45,7 @@
             <RowDefinition/>
             <RowDefinition Height="0*"/>
         </Grid.RowDefinitions>
-        <DataGrid x:Name="DatagridShop"  Margin="1,1,1,1" BorderThickness="0,0,0,0" Background="#B2FF0000" ColumnWidth="*" CanUserAddRows="False" CanUserResizeRows="False" CanUserDeleteRows="False" IsReadOnly="True" SelectionMode="Single" Grid.Row="2" Grid.RowSpan="7" SelectionChanged="DatagridShop_SelectionChanged" />
+        <DataGrid x:Name="DatagridShop"  Margin="1,1,1,1" BorderThickness="0,0,0,0" Background="#B2FF0000" ColumnWidth="*" CanUserAddRows="False" CanUserResizeRows="False" CanUserDeleteRows="False" IsReadOnly="True" SelectionMode="Single" Grid.Row="2" Grid.RowSpan="7" SelectionChanged="DatagridShop_SelectionChanged" MouseDoubleClick="DatagridShop_MouseDoubleClick" />
         <TextBlock  Margin="1,1,1,1" TextWrapping="Wrap" Text="Find Shop" Foreground="#FFFFFFFF" Grid.Row="9"/>
         <TextBox x:Name="FindShop" TextWrapping="Wrap"  Width="auto" Height="auto" Margin="1,1,1,1" Grid.Row="10" TextChanged="FindCharacters_TextChanged"/>
         <Button Content="Update"  Margin="1,1,1,1" BorderThickness="0,0,0,0" Background="#B2FF0000" Foreground="#FFFDFDFD" Grid.Row="12" Click="update">

@@ -395,9 +395,6 @@ namespace MuEditor.Forms.FormsAdministrador
                     Statics.Document.Blocks.Add(new Paragraph(new Run("Increase 5 Atacck(Wizard)Speed")));
                 }
             }
-
-
-
             //Statics.Document.PageWidth = 1000;
             LoadTypeItem();
         }
@@ -406,6 +403,7 @@ namespace MuEditor.Forms.FormsAdministrador
             DataGrid dg = (DataGrid)sender;
             if (dg.SelectedItem is DataRowView row)
             {
+                Item.name = row["name"].ToString();
                 Item.itemGUID = int.Parse(row["guid"].ToString());
                 Item.typeItemSelect = int.Parse(row["type"].ToString());
             }
@@ -498,7 +496,6 @@ namespace MuEditor.Forms.FormsAdministrador
                 return;
             }
 
-
             Config.applicationAlert = true;
             InputsPopulate();
 
@@ -542,9 +539,28 @@ namespace MuEditor.Forms.FormsAdministrador
 
         private void DeleteItemToNPC()
         {
+            Config.applicationAlert = true;
+            MessageBoxCustomAlert customAlert = new();
+            MessageBoxCustomError customError = new();
+
+            if (Item.itemGUID == null)
+            {
+                customError.CustomMessage.Text = "No Item selected";
+                customError.ShowDialog();
+                return;
+            }
+
+            customAlert.CustomMessage.Text = "Are you sure to delete the [" + Item.name + "]";
+            customAlert.ShowDialog();
+
+            if (Config.applicationAlert == false)
+                return;
+
             Query query = new();
             Connect.Update(query.deleteItemToNPC);
             LoadShopItems();
+
+            Item.itemGUID = null;
         }
         private void Button_Click_3(object sender, RoutedEventArgs e)
         {
