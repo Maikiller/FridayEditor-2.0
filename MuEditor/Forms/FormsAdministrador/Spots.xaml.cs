@@ -110,6 +110,10 @@ namespace MuEditor.Forms.FormsAdministrador
             Query query = new();
             Connect.Update(query.addMonsterSpot);
 
+            Query query2 = new();
+            DatagridMonster.ItemsSource = Connect.LoadData(query2.filterMonsterWorld).DefaultView;
+            DatagridMonster.Columns[4].Visibility = Visibility.Hidden;
+
 
         }
 

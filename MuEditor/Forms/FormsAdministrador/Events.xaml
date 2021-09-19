@@ -5,11 +5,91 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MuEditor.Forms.FormsAdministrador"
         mc:Ignorable="d"
-        Title="Events" Height="450" Width="800" WindowStartupLocation="CenterScreen" AllowsTransparency="True" WindowStyle="None" MouseDown="Window_MouseDown">
+        Title="Events" Height="465" Width="475" WindowStartupLocation="CenterScreen" AllowsTransparency="True" WindowStyle="None" MouseDown="Window_MouseDown" Loaded="Window_Loaded">
     <Window.Background>
         <SolidColorBrush  Opacity=".3" Color="Black"></SolidColorBrush>
     </Window.Background>
     <Grid>
-        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0*"/>
+            <ColumnDefinition Width="75"/>
+            <ColumnDefinition Width="50"/>
+            <ColumnDefinition Width="50"/>
+            <ColumnDefinition Width="50"/>
+            <ColumnDefinition Width="50"/>
+            <ColumnDefinition Width="50"/>
+            <ColumnDefinition Width="50"/>
+            <ColumnDefinition Width="50"/>
+            <ColumnDefinition Width="50"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0*"/>
+            <RowDefinition Height="200"/>
+            <RowDefinition Height="25"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="25"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="25"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="25"/>
+            <RowDefinition Height="25"/>
+            <RowDefinition Height="25"/>
+            <RowDefinition Height="25"/>
+            <RowDefinition Height="0*"/>
+        </Grid.RowDefinitions>
+        <DataGrid x:Name="DatagridEvents" Margin="1,1,1,1" Grid.RowSpan="2" BorderThickness="0,0,0,0" Background="#B2FF0000" ColumnWidth="*" CanUserAddRows="False" CanUserResizeRows="False" CanUserDeleteRows="False" IsReadOnly="True" SelectionMode="Single" Grid.ColumnSpan="10" SelectionChanged="DatagridEvents_SelectionChanged" />
+        <TextBlock  Margin="1,1,1,1" TextWrapping="Wrap" Text="Server" Grid.Row="2" Foreground="#FFFFFFFF" Grid.ColumnSpan="2"/>
+        <ComboBox x:Name="ComboServer" Grid.Row="3" Margin="1,1,1,1" Grid.Column="1" />
+        <ComboBox x:Name="ComboEvent" Grid.Row="3" Margin="1,1,1,1" Grid.Column="3"  Grid.ColumnSpan="2" DropDownClosed="ComboEvent_DropDownClosed" SelectionChanged="ComboEvent_SelectionChanged"/>
+        <ComboBox x:Name="ComboInvasion" Grid.Row="3" Margin="1,1,1,1" Grid.Column="5"  Grid.ColumnSpan="2" IsEditable="False" IsEnabled="False"/>
+        <TextBlock  Margin="1,1,1,1" TextWrapping="Wrap" Text="Hour" Grid.Row="4" Foreground="#FFFFFFFF" Grid.Column="3"/>
+        <TextBlock  Margin="1,1,1,1" TextWrapping="Wrap" Text="Minute" Grid.Row="4" Foreground="#FFFFFFFF" Grid.Column="4"/>
+        <TextBlock  Margin="1,1,1,1" TextWrapping="Wrap" Text="Duration" Grid.Row="4" Foreground="#FFFFFFFF" Grid.Column="5"/>
+        <TextBlock  Margin="1,1,1,1" TextWrapping="Wrap" Text="Notify Time" Grid.Row="4" Foreground="#FFFFFFFF" Grid.Column="6" FontSize="9.4"/>
+        <TextBox x:Name="Hour" TextWrapping="Wrap"  Width="auto" Height="auto" Margin="1,1,1,1"  Grid.Row="5" Grid.Column="3" Text="0"/>
+        <TextBox x:Name="Minutes" TextWrapping="Wrap"  Width="auto" Height="auto" Margin="1,1,1,1"  Grid.Row="5" Grid.Column="4" Text="0"/>
+        <TextBox x:Name="Duration" TextWrapping="Wrap"  Width="auto" Height="auto" Margin="1,1,1,1"  Grid.Row="5" Grid.Column="5" Text="0"/>
+        <TextBox x:Name="AlertTime" TextWrapping="Wrap"  Width="auto" Height="auto" Margin="1,1,1,1"  Grid.Row="5" Grid.Column="6" Text="0"/>
+        <TextBlock  Margin="1,1,1,1" TextWrapping="Wrap" Text="Event Season" Grid.Row="4" Foreground="#FFFFFFFF" Grid.Column="8" FontSize="9.4"/>
+        <TextBlock  Margin="1,1,1,1" TextWrapping="Wrap" Text="Server Exclusive" Grid.Row="4" Foreground="#FFFFFFFF" Grid.Column="9" FontSize="9.3"/>
+        <TextBox x:Name="EventSeason" TextWrapping="Wrap"  Width="auto" Height="auto" Margin="1,1,1,1"  Grid.Row="5" Grid.Column="8" Text="-1"/>
+        <TextBox x:Name="ServerExclusive" TextWrapping="Wrap"  Width="auto" Height="auto" Margin="1,1,1,1"  Grid.Row="5" Grid.Column="9" Text="-1"/>
+        <TextBlock  Margin="1,1,1,1" TextWrapping="Wrap" Text="Day Week" Grid.Row="2" Foreground="#FFFFFFFF" Grid.Column="8" FontSize="10.8"/>
+        <TextBlock  Margin="1,1,1,1" TextWrapping="Wrap" Text="Day Month" Grid.Row="2" Foreground="#FFFFFFFF" Grid.Column="9" FontSize="9.7"/>
+        <TextBox x:Name="DayWeek" TextWrapping="Wrap"  Width="auto" Height="auto" Margin="1,1,1,1"  Grid.Row="3" Grid.Column="8" Text="-1"/>
+        <TextBox x:Name="DayMouth" TextWrapping="Wrap"  Width="auto" Height="auto" Margin="1,1,1,1"  Grid.Row="3" Grid.Column="9" Text="-1"/>
+        <Button Grid.Column="8" Margin="1,1,1,1" Grid.Row="11" BorderThickness="0,0,0,0" Background="#B2FF0000" Foreground="#FFFDFDFD" Grid.ColumnSpan="2" Content="Close" Click="Button_Click_3">
+            <Button.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="5"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+        <Button Grid.Column="4" Margin="1,1,1,1" Grid.Row="10" BorderThickness="0,0,0,0" Background="#B2FF0000" Foreground="#FFFDFDFD" Grid.ColumnSpan="2" Content="Update" Click="Button_Click_1">
+            <Button.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="5"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+        <Button Grid.Column="4" Margin="1,1,1,1" Grid.Row="9" BorderThickness="0,0,0,0" Background="#B2FF0000" Foreground="#FFFDFDFD" Grid.ColumnSpan="2" Content="Add" Click="Button_Click">
+            <Button.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="5"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+        <TextBlock  Margin="1,1,1,1" TextWrapping="Wrap" Text="Event Selected" Grid.Row="6" Foreground="#FFFFFFFF" Grid.Column="8" FontSize="9.4" Grid.ColumnSpan="2"/>
+        <TextBox x:Name="EventSelected" TextWrapping="Wrap"  Width="auto" Height="auto" Margin="1,1,1,1"  Grid.Row="7" Grid.Column="8" Grid.ColumnSpan="2"/>
+        <Button Grid.Column="8" Margin="1,1,1,1" Grid.Row="8" BorderThickness="0,0,0,0" Background="#B2FF0000" Foreground="#FFFDFDFD" Grid.ColumnSpan="2" Content="Delete" Click="Button_Click_2">
+            <Button.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="5"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+        <TextBlock  Margin="1,1,1,1" TextWrapping="Wrap" Text="Event" Grid.Row="2" Foreground="#FFFFFFFF" Grid.ColumnSpan="2" Grid.Column="3"/>
+        <TextBlock  Margin="1,1,1,1" TextWrapping="Wrap" Text="Invasion" Grid.Row="2" Foreground="#FFFFFFFF" Grid.ColumnSpan="2" Grid.Column="5"/>
+
     </Grid>
 </Window>

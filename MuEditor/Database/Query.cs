@@ -431,5 +431,78 @@ namespace MuEditor.Database
             "WHERE world_template.name = '" + MonsterSpot.worldName + "' " +
             "and monster.server = " + MonsterSpot.server + "";
 
+        public string loadEventsDatagrid =
+            "SELECT " +
+            "event_manager.server," +
+            "event_template.name AS Event," +
+            "event_invasion_data.name," +
+            "event_manager.duration," +
+            "event_manager.notify_time," +
+            "event_manager.hour," +
+            "event_manager.minute," +
+            "event_manager.guid " +
+            "FROM " +
+            "mu_game.event_manager " +
+            "INNER JOIN " +
+            "mu_game.event_invasion_data ON event_manager.invasion = event_invasion_data.invasion   " +
+            "INNER JOIN " +
+            "mu_editor_config.event_template ON event_manager.event = event_template.id";
+
+        public string loadEventSelect =
+            "SELECT " +
+            "event_manager.server," +
+            "event_template.name AS Event," +
+            "event_invasion_data.name," +
+            "event_manager.duration," +
+            "event_manager.notify_time," +
+            "event_manager.hour," +
+            "event_manager.minute," +
+            "event_manager.guid," +
+            "event_manager.day_of_week," +
+            "event_manager.day_of_month," +
+            "event_manager.season_event," +
+            "event_manager.exclusive_server " +
+            "FROM " +
+            "mu_game.event_manager " +
+            "INNER JOIN mu_game.event_invasion_data ON event_manager.invasion = event_invasion_data.invasion " +
+            "INNER JOIN mu_editor_config.event_template ON event_manager.event = event_template.id " +
+            "WHERE " +
+            "event_manager.guid = " + Events.guid + "";
+
+        public string loadEventsCombo =
+            "SELECT " +
+            "event_template.id," +
+            "event_template.name " +
+            "FROM " +
+            "event_template";
+        public string loadIvasions =
+            "SELECT " +
+            "event_invasion_data.invasion," +
+            "event_invasion_data.name " +
+            "FROM " +
+            "event_invasion_data";
+
+        public string addEvents =
+            "INSERT INTO event_manager (season_event, exclusive_server, server, event, invasion, duration, notify_time, hour, minute, day_of_week, day_of_month)" +
+            "VALUES(" + Events.eventSeason + ", " + Events.serverExclusive + ", " + Events.server + ", " + Events.events + ", " + Events.invasion + ", " + Events.duration + ", " + Events.alerTime + ", " + Events.hour + ", " + Events.min + ", " + Events.dayWeek + ", " + Events.dayMouth + ")";
+
+        public string updateEvents =
+            "UPDATE event_manager SET " +
+            "season_event = " + Events.eventSeason + "," +
+            "exclusive_server = " + Events.serverExclusive + "," +
+            "server = " + Events.server + "," +
+            "event = " + Events.events + "," +
+            "invasion = " + Events.invasion + "," +
+            "duration = " + Events.duration + "," +
+            "notify_time = " + Events.alerTime + "," +
+            "hour = " + Events.hour + "," +
+            "minute = " + Events.min + "," +
+            "day_of_week = " + Events.dayWeek + "," +
+            "day_of_month =" + Events.dayMouth + "";
+
+        public string deleteEvents =
+            "DELETE FROM " +
+            "event_manager WHERE " +
+            "guid = " + Events.guid + "";
     }
 }
