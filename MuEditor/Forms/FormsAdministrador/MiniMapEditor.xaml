@@ -5,11 +5,75 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MuEditor.Forms.FormsAdministrador"
         mc:Ignorable="d"
-        Title="MiniMapEditor" Height="450" Width="800" WindowStartupLocation="CenterScreen" AllowsTransparency="True" WindowStyle="None" MouseDown="Window_MouseDown" Foreground="#FFFFFFFF">
+        Title="MiniMapEditor" Height="440" Width="800" WindowStartupLocation="CenterScreen" AllowsTransparency="True" WindowStyle="None" MouseDown="Window_MouseDown" Foreground="#FFFFFFFF" Loaded="Window_Loaded">
     <Window.Background>
         <SolidColorBrush  Opacity=".3" Color="Black"></SolidColorBrush>
     </Window.Background>
     <Grid>
-        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="180"/>
+            <ColumnDefinition Width="50"/>
+            <ColumnDefinition Width="50"/>
+            <ColumnDefinition Width="100"/>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="100"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="25"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="200"/>
+            <RowDefinition Height="25"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="25"/>
+            <RowDefinition Height="5"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <DataGrid x:Name="DatagridMiniMap"  Margin="1,1,1,1" BorderThickness="0,0,0,0" Background="#B2FF0000" ColumnWidth="*" CanUserAddRows="False" CanUserResizeRows="False" CanUserDeleteRows="False" IsReadOnly="True" SelectionMode="Single" Grid.Row="2" Grid.ColumnSpan="6" SelectionChanged="DatagridMiniMap_SelectionChanged" />
+        <ComboBox x:Name="ComboWorld" Margin="1,1,1,1" Grid.Row="1" DropDownClosed="Race_DropDownClosed"/>
+        <TextBlock Margin="1,1,1,1" TextWrapping="Wrap" Text="World"/>
+        <ComboBox x:Name="ComboServer" Margin="1,1,1,1" Grid.Row="1" Grid.Column="1" DropDownClosed="ComboServer_DropDownClosed" />
+        <TextBlock Margin="1,1,1,1" TextWrapping="Wrap" Text="Server" Grid.Column="1"/>
+        <TextBlock Margin="1,1,1,1" TextWrapping="Wrap" Text="x" Grid.Column="1" Grid.Row="3" FontSize="17"/>
+        <TextBox x:Name="x" TextWrapping="Wrap"  Width="auto" Height="auto" Margin="1,1,1,1"  Grid.Row="4" Grid.Column="1" Text="0"/>
+        <TextBlock Margin="1,1,1,1" TextWrapping="Wrap" Text="y" Grid.Column="2" Grid.Row="3" FontSize="17"/>
+        <TextBox x:Name="y" TextWrapping="Wrap"  Width="auto" Height="auto" Margin="1,1,1,1"  Grid.Row="4" Grid.Column="2" Text="0"/>
+        <ComboBox x:Name="ComboType" Margin="1,1,1,1" Grid.Row="4" Grid.Column="3" DropDownClosed="ComboType_DropDownClosed"/>
+        <TextBlock Margin="1,1,1,1" TextWrapping="Wrap" Text="Type" Grid.Column="3" Grid.Row="3"/>
+        <TextBlock Margin="1,1,1,1" TextWrapping="Wrap" Text="Text MiniMap" Grid.Column="1" Grid.Row="5" Grid.ColumnSpan="2"/>
+        <TextBox x:Name="text" TextWrapping="Wrap"  Width="auto" Height="auto" Margin="1,1,1,1"  Grid.Row="6" Grid.Column="1" Grid.ColumnSpan="2" Grid.RowSpan="2"/>
+        <TextBlock Margin="1,1,1,1" TextWrapping="Wrap" Text="Delete" Grid.Column="5" Grid.Row="3"/>
+        <TextBox x:Name="delete" TextWrapping="Wrap"  Width="auto" Height="auto" Margin="1,1,1,1"  Grid.Row="4" Grid.Column="5"/>
+        <Button Grid.Column="5" Content="Delete"  Margin="1,1,1,1" Grid.Row="5" BorderThickness="0,0,0,0" Background="#B2FF0000" Foreground="#FFFDFDFD" Click="Button_Click" Grid.RowSpan="2">
+            <Button.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="5"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+        <Button Grid.Column="1" Content="Add"  Margin="1,1,1,1" Grid.Row="8" BorderThickness="0,0,0,0" Background="#B2FF0000" Foreground="#FFFDFDFD" Click="Button_Click" Grid.ColumnSpan="2">
+            <Button.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="5"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+        <Button Grid.Column="1" Content="Update"  Margin="1,1,1,1" Grid.Row="9" BorderThickness="0,0,0,0" Background="#B2FF0000" Foreground="#FFFDFDFD" Grid.ColumnSpan="2" Click="Button_Click_2">
+            <Button.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="5"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+        <Button Grid.Column="5" Content="Close"  Margin="1,1,1,1" Grid.Row="9" BorderThickness="0,0,0,0" Background="#B2FF0000" Foreground="#FFFDFDFD" Click="Button_Click_1">
+            <Button.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="5"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+
     </Grid>
 </Window>

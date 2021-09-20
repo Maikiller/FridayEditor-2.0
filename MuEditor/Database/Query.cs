@@ -234,7 +234,9 @@ namespace MuEditor.Database
             "server_list";
 
         public string getWorldEntry =
-            "SELECT world_template.entry " +
+            "SELECT " +
+            "world_template.entry," +
+            "world_template.name " +
             "FROM " +
             "world_template " +
             "WHERE " +
@@ -504,5 +506,62 @@ namespace MuEditor.Database
             "DELETE FROM " +
             "event_manager WHERE " +
             "guid = " + Events.guid + "";
+
+        public string loadMiniMap =
+            "SELECT " +
+            "world_template.name," +
+            "mini_map.x," +
+            "mini_map.y," +
+            "mini_map.text " +
+            "FROM " +
+            "mini_map INNER JOIN world_template ON mini_map.world = world_template.entry ";
+
+        public string loadMiniMapSelected =
+           "SELECT " +
+            "world_template.name," +
+            "icons_template.name AS Icon," +
+            "mini_map.index," +
+            "mini_map.x," +
+            "mini_map.y," +
+            "mini_map.text " +
+            "FROM " +
+            "mu_game.mini_map INNER JOIN mu_editor_config.icons_template ON mini_map.type = icons_template.type " +
+            "INNER JOIN mu_game.world_template ON mini_map.world = world_template.entry " +
+            "WHERE " +
+            "mini_map.world = " + MiniMap.worldEntry + " " +
+            "AND " +
+            "mini_map.server = " + MiniMap.server + "";
+
+        public string world =
+            "SELECT " +
+            "world_template.entry," +
+            "world_template.name " +
+            "FROM " +
+            "world_template";
+
+        public string loadIcons =
+            "SELECT " +
+            "icons_template.type," +
+            "icons_template.name " +
+            "FROM " +
+            "icons_template";
+
+        public string saveIcons =
+            "INSERT INTO mini_map (world, `index`, `group`, type, x, y, text, server)" +
+            "VALUES(" + MiniMap.worldEntry + ", " + MiniMap.id + ", 0, " + MiniMap.type + ", " + MiniMap.x + ", " + MiniMap.y + ", '" + MiniMap.text + "', " + MiniMap.server + ")";
+        public string countMaxMinimap =
+            "SELECT MAX(`index`) FROM mini_map;";
+
+        public string updateIcons =
+            "UPDATE " +
+            "mini_map " +
+            "SET world = " + MiniMap.worldEntry + "," +
+            "type = " + MiniMap.type + "," +
+            "x = " + MiniMap.x + "," +
+            "y = " + MiniMap.y+ "," +
+            "text = '"+MiniMap.text+"'," +
+            "server = "+MiniMap.server+" " +
+            "WHERE " +
+            "`index` = "+MiniMap.id+"";
     }
 }
