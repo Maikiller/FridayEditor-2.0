@@ -36,5 +36,11 @@ namespace MuEditor.Forms.Utils
             Config.applicationAlert = false;
             Close();
         }
+
+        private void Window_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            if (e.LeftButton == MouseButtonState.Pressed)
+                DragMove();
+        }
     }
 }

@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:MuEditor.Forms.Utils"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" x:Class="MuEditor.Forms.Utils.MessageBoxCustomAlert"
         mc:Ignorable="d"
-        Title="MessageBoxCustomAlert" Height="168" Width="300" AllowsTransparency="True" WindowStyle="None" WindowStartupLocation="CenterScreen">
+        Title="MessageBoxCustomAlert" Height="168" Width="300" AllowsTransparency="True" WindowStyle="None" WindowStartupLocation="CenterScreen" MouseDown="Window_MouseDown">
     <Grid>
 
         <TextBlock x:Name="CustomMessage" HorizontalAlignment="Center" TextWrapping="Wrap" Text="---" VerticalAlignment="Top" Margin="0,68,0,0"/>

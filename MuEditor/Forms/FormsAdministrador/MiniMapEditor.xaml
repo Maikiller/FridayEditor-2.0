@@ -46,7 +46,7 @@
         <TextBox x:Name="text" TextWrapping="Wrap"  Width="auto" Height="auto" Margin="1,1,1,1"  Grid.Row="6" Grid.Column="1" Grid.ColumnSpan="2" Grid.RowSpan="2"/>
         <TextBlock Margin="1,1,1,1" TextWrapping="Wrap" Text="Delete" Grid.Column="5" Grid.Row="3"/>
         <TextBox x:Name="delete" TextWrapping="Wrap"  Width="auto" Height="auto" Margin="1,1,1,1"  Grid.Row="4" Grid.Column="5"/>
-        <Button Grid.Column="5" Content="Delete"  Margin="1,1,1,1" Grid.Row="5" BorderThickness="0,0,0,0" Background="#B2FF0000" Foreground="#FFFDFDFD" Click="Button_Click" Grid.RowSpan="2">
+        <Button Grid.Column="5" Content="Delete"  Margin="1,1,1,1" Grid.Row="5" BorderThickness="0,0,0,0" Background="#B2FF0000" Foreground="#FFFDFDFD" Grid.RowSpan="2" Click="Button_Click_3">
             <Button.Resources>
                 <Style TargetType="{x:Type Border}">
                     <Setter Property="CornerRadius" Value="5"/>

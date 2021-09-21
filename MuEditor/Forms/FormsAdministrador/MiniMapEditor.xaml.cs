@@ -89,7 +89,6 @@ namespace MuEditor.Forms.FormsAdministrador
         private void ComboType_DropDownClosed(object sender, EventArgs e)
         {
             MiniMap.type = int.Parse(ComboType.SelectedValue.ToString());
-            MessageBox.Show(MiniMap.type.ToString());
         }
 
         private void Inputs()
@@ -130,11 +129,21 @@ namespace MuEditor.Forms.FormsAdministrador
             Inputs();
             Query query = new();
             Connect.Update(query.updateIcons);
+            Query query2 = new();
+            DatagridMiniMap.ItemsSource = Connect.LoadData(query2.loadMiniMapSelected).DefaultView;
         }
 
         private void Button_Click_2(object sender, RoutedEventArgs e)
         {
             UpdateMiniMap();
+        }
+
+        private void Button_Click_3(object sender, RoutedEventArgs e)
+        {
+            Query query = new();
+            Connect.Update(query.deleteIcons);
+            Query query2 = new();
+            DatagridMiniMap.ItemsSource = Connect.LoadData(query2.loadMiniMapSelected).DefaultView;
         }
     }
 }

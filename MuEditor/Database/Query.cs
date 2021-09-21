@@ -558,10 +558,17 @@ namespace MuEditor.Database
             "SET world = " + MiniMap.worldEntry + "," +
             "type = " + MiniMap.type + "," +
             "x = " + MiniMap.x + "," +
-            "y = " + MiniMap.y+ "," +
-            "text = '"+MiniMap.text+"'," +
-            "server = "+MiniMap.server+" " +
+            "y = " + MiniMap.y + "," +
+            "text = '" + MiniMap.text + "'," +
+            "server = " + MiniMap.server + " " +
             "WHERE " +
-            "`index` = "+MiniMap.id+"";
+            "`index` = " + MiniMap.id + "";
+
+        public string deleteIcons =
+            "DELETE " +
+            "FROM " +
+            "mini_map " +
+            "WHERE " +
+            "`index` = " + MiniMap.id + "";
     }
 }
