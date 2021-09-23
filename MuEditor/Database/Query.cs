@@ -570,5 +570,30 @@ namespace MuEditor.Database
             "mini_map " +
             "WHERE " +
             "`index` = " + MiniMap.id + "";
+
+        public string laodServerLists =
+            "SELECT " +
+            "server_list.server," +
+            "server_list.name," +
+            "server_list.port," +
+            "server_list.ip," +
+            "server_list.online," +
+            "world_template.name AS Map," +
+            "server_list.default_x," +
+            "server_list.default_y " +
+            "FROM mu_online_login.server_list " +
+            "INNER JOIN " +
+            "mu_game.world_template ON server_list.default_world = world_template.entry";
+
+        public string addServerLists =
+            "INSERT INTO server_list (server, name, port, ip, online, default_x, default_y, code, flag, default_world, type)" +
+            "VALUES(" + ServeLists.server + ", '" + ServeLists.serverName + "', " + ServeLists.port + ", '" + ServeLists.ip + "', " + ServeLists.online + ", " + ServeLists.x + ", " + ServeLists.y + ", " + ServeLists.server + ", 1, " + ServeLists.WorldEntry + ", " + ServeLists.type + ")";
+
+        public string DeleteServerLists =
+            "DELETE " +
+            "FROM " +
+            "server_list " +
+            "WHERE " +
+            "code = " + ServeLists.server + "";
     }
 }

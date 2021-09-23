@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Roots >
+  <Roots.Interfaces>
+    <RootInterface FullName="Windows.UI.Xaml.Data.IValueConverter" />
+  </Roots.Interfaces>
+  <Roots.PropertyPathNames>
+    <RootPropertyPathName Name="Text" />
+  </Roots.PropertyPathNames>
+  <Roots.RootTypes>
+    <RootType FullName="Windows.UI.Xaml.ResourceDictionary" />
+    <RootType FullName="HelixToolkit.UWP.Converters.BoolToVisibilityConverter" />
+    <RootType FullName="HelixToolkit.UWP.Converters.EmptyStringToVisibilityConverter" />
+    <RootType FullName="HelixToolkit.UWP.Controls.HelixItemsControl">
+      <RootProperty Name="IsHitTestVisible" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.ControlTemplate">
+      <RootProperty Name="Template" />
+      <RootProperty Name="TargetType" />
+    </RootType>
+    <RootType FullName="HelixToolkit.UWP.Element3D" />
+    <RootType FullName="Windows.UI.Xaml.Controls.Control">
+      <RootProperty Name="Template" />
+      <RootProperty Name="Background" />
+    </RootType>
+    <RootType FullName="HelixToolkit.UWP.ViewBoxModel3D" />
+    <RootType FullName="HelixToolkit.UWP.CoordinateSystemModel3D" />
+    <RootType FullName="HelixToolkit.UWP.Viewport3DX" />
+    <RootType FullName="HelixToolkit.UWP.PerspectiveCamera" />
+    <RootType FullName="HelixToolkit.UWP.OrthographicCamera" />
+    <RootType FullName="HelixToolkit.UWP.PhongMaterial" />
+    <RootType FullName="HelixToolkit.UWP.DiffuseMaterial" />
+    <RootType FullName="HelixToolkit.UWP.NormalMaterial" />
+    <RootType FullName="HelixToolkit.UWP.NormalVectorMaterial" />
+    <RootType FullName="HelixToolkit.UWP.VertColorMaterial" />
+    <RootType FullName="HelixToolkit.UWP.PositionColorMaterial" />
+    <RootType FullName="HelixToolkit.UWP.ColorStripeMaterial" />
+    <RootType FullName="Windows.UI.Xaml.Setter">
+      <RootProperty Name="Property" />
+      <RootProperty Name="Value" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.Grid">
+      <RootProperty Name="HorizontalAlignment" />
+      <RootProperty Name="VerticalAlignment" />
+      <RootProperty Name="Background" />
+      <RootProperty Name="ManipulationMode" />
+      <RootProperty Name="Style" />
+      <RootProperty Name="Children" />
+    </RootType>
+    <RootType FullName="Microsoft.Xaml.DirectUI.ProxyTypes.TemplateBindingExtension" />
+    <RootType FullName="Microsoft.Xaml.DirectUI.ProxyTypes.NullExtension" />
+    <RootType FullName="Windows.UI.Xaml.Controls.ContentPresenter">
+      <RootProperty Name="IsHitTestVisible" />
+      <RootProperty Name="HorizontalContentAlignment" />
+      <RootProperty Name="VerticalContentAlignment" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.TextBox">
+      <RootProperty Name="HorizontalAlignment" />
+      <RootProperty Name="VerticalAlignment" />
+      <RootProperty Name="Background" />
+      <RootProperty Name="Foreground" />
+      <RootProperty Name="IsReadOnly" />
+      <RootProperty Name="Text" />
+      <RootProperty Name="Visibility" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Data.Binding">
+      <RootProperty Name="RelativeSource" />
+      <RootProperty Name="Mode" />
+      <RootProperty Name="Converter" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Data.RelativeSource">
+      <RootProperty Name="Mode" />
+    </RootType>
+    <RootType FullName="Microsoft.Xaml.DirectUI.ProxyTypes.StaticResourceExtension">
+      <RootProperty Name="ResourceKey" />
+    </RootType>
+  </Roots.RootTypes>
+</Roots>

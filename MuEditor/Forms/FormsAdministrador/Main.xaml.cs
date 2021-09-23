@@ -26,7 +26,7 @@ namespace MuEditor.Forms.FormsAdministrador
             InitializeComponent();
         }
 
-        
+
 
         private void Window_Closed(object sender, EventArgs e)
         {
@@ -119,6 +119,12 @@ namespace MuEditor.Forms.FormsAdministrador
         private void Button_Click_13(object sender, RoutedEventArgs e)
         {
             Close();
+        }
+
+        private void Button_Click_14(object sender, RoutedEventArgs e)
+        {
+            Develop develop = new();
+            develop.Show();
         }
     }
 }

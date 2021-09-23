@@ -125,6 +125,13 @@
                 </Style>
             </Button.Resources>
         </Button>
+        <Button Content="Tester Develop" Grid.Column="3" Grid.Row="2" Margin="1,1,1,1" BorderThickness="0,0,0,0" Background="#B2FF0000" Foreground="#FFFDFDFD" Click="Button_Click_14">
+            <Button.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="5"/>
+                </Style>
+            </Button.Resources>
+        </Button>
 
     </Grid>
 </Window>
